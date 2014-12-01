@@ -6,11 +6,11 @@
 		<NAME>PARAMETRICEQ</NAME>
 		<FLAG>0x000000ff</FLAG>
 		<VAR>
-			<value id="0" name="FILTER_COEFFICIENT" index="0">0xffc19ad5</value>
-			<value id="1" name="FILTER_COEFFICIENT" index="1">0x001e6f07</value>
-			<value id="2" name="FILTER_COEFFICIENT" index="2">0x001fc437</value>
-			<value id="3" name="FILTER_COEFFICIENT" index="3">0xffc19860</value>
-			<value id="4" name="FILTER_COEFFICIENT" index="4">0x001ea85a</value>
+			<value id="0" name="FILTER_COEFFICIENT" index="0">0xffc07d61</value>
+			<value id="1" name="FILTER_COEFFICIENT" index="1">0x001f844f</value>
+			<value id="2" name="FILTER_COEFFICIENT" index="2">0x001fe92d</value>
+			<value id="3" name="FILTER_COEFFICIENT" index="3">0xffc07d61</value>
+			<value id="4" name="FILTER_COEFFICIENT" index="4">0x001f9b21</value>
 			<value id="5" name="FILTER_COEFFICIENT" index="5">0x00000000</value>
 			<value id="6" name="FILTER_COEFFICIENT" index="6">0x00000000</value>
 			<value id="7" name="FILTER_COEFFICIENT" index="7">0x00200000</value>

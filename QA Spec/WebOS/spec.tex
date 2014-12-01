@@ -1,0 +1,4303 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This file is a template using the "beamer" package to create slides for a talk or presentation
+% - Giving a talk on some subject.
+% - The talk is between 15min and 45min long.
+% - Style is ornate.
+
+% MODIFIED by Jonathan Kew, 2008-07-06
+% The header comments and encoding in this file were modified for inclusion with TeXworks.
+% The content is otherwise unchanged from the original distributed with the beamer package.
+
+\documentclass{beamer}
+
+
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice.
+
+
+\mode<presentation>
+{
+\usetheme{Warsaw}
+\usefonttheme[onlylarge]{structurebold}
+\usecolortheme{seagull}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{\insertframenumber/\inserttotalframenumber}{}
+% or ...
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+}
+
+
+
+
+\usepackage[english]{babel}
+% or whatever
+\usepackage{kotex}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+%\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{itemize subitem}{$\circ$}
+\setbeamertemplate{itemize subsubitem}{$\cdot$}
+
+\setbeamertemplate{itemize/enumerate body begin}{\footnotesize}
+\setbeamertemplate{itemize/enumerate subbody begin}{\scriptsize}
+\setbeamertemplate{itemize/enumerate subsubbody begin}{\scriptsize}
+
+% huge
+% large
+% normalsize
+% small
+% footnotesize
+% scriptsize
+% tiny
+
+
+\setlength{\leftmargin}{5pt}
+\setlength{\leftmargini}{5pt}
+\setlength{\leftmarginii}{5pt}
+\setlength{\leftmarginiii}{5pt}
+
+
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\title[WebOS 2.0 QA spec \alert{LGE CONFIDENTIAL}] % (optional, use only with long paper titles)
+{LGSE QA Test Manual Ver.11}
+
+\subtitle
+{for H15/M14+ - WebOS 2.0} % (optional)
+
+
+\author[Kichul Kim, Bong-Jin Lee] % (optional, use only with lots of authors)
+{Kichul Kim (kichul.kim@lge.com)\\Bong-Jin Lee (bongjin.lee@lge.com)}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[IPT team, SIC lab., LG Electronics] % (optional, but mostly needed)
+{
+  IPT team, SIC lab., LG Electronics \\
+  Release Link: (http://collab.lge.com/main/x/jLbjCQ)
+  }
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date[Short Occasion] % (optional)
+{\today\\ \alert{LGE CONFIDENTIAL}}
+
+\subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out.
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Test Spec. 사용 및 관리}
+
+ \begin{itemize}
+ \item Test Spec 변경의 원인은 아래와 같습니다.
+ 	\begin{itemize}
+	\item 기능의 특성상 각 기능의 parameter 값이 튜닝 후 변경되면, 특성들이 변경됩니다.
+	\item 이 때문에, parameter 변경을 하게 되면 Spec도 변경되게 됩니다.
+	\end{itemize}
+\end{itemize}
+
+ \begin{itemize}
+ \item Test Spec 사용
+ 	\begin{itemize}
+ 	\item Test Spec은 현재 기준으로 가장 최종 Spec을 적용하여 사용하시면 됩니다.
+	\end{itemize}
+\end{itemize}
+
+ \begin{itemize}
+ \item Test Spec 관리
+ 	\begin{itemize}
+ 	\item parameter 값을 튜닝 및 관리하는 TV 음팀과 SIC 연구소 IPT팀에서 Spec 배포 및 관리하며, 최종 버전 문서만 관리 대상입니다.
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{History}
+\begin{itemize}
+\begin{scriptsize}
+\item 2014.07.26\_Ver.1 Init
+\item 2014.07.29\_Ver.2 2spk Smart Sound (home, store), 3D Sound Zooming 수정
+\item 2014.08.22\_Ver.3 4.2spk (UF95) 모델 스펙 추가
+\item 2014.08.28\_Ver.4 4.2spk Game, 3D Sound Zooming 스펙 변경
+\item 2014.09.03\_Ver.5 LF63 Smart Sound, 3D Sound Zooming, Game, News, Music, Sports, Surround 스펙 변경 / Punk, Pagode, Sertawego 스펙 추가
+\item 2014.09.15\_Ver.6 UF95 Smart Sound, 3D Sound Zooming, Game, News, Music, Sports, Surround 스펙 변경
+\item 2014.09.19\_Ver.7 UF95 Smart Sound, 3D Sound Zooming, Cinema, Game, News, Sports, Surround 스펙 변경 / High Resolution 스펙 추가
+\item 2014.10.24\_Ver.8 UF85 모델 스펙 추가
+\item 2014.11.06\_Ver.9 EG96 모델 스펙 추가 / UF85 sports, game, cinema 스펙 변경
+\item 2014.11.20\_Ver.10 LF63 StandType 스펙 변경
+\item 2014.12.01\_Ver.11 UF85/UF95 StandType 스펙 변경
+
+\end{scriptsize}
+\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+\tableofcontents
+\huge Audio Precision 설정 방법\\
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Signal Path Setting}
+\begin{itemize}
+\item 스피커앰프의 출력을 8옴 1\% Dummy 저항을 거쳐서 Audio Precision에 입력으로 연결합니다.
+\item 테스트 신호는 Audio Precision에서 재생하는 사운드로 HDMI 혹은 unbalaced (RCA)를 이용합니다.
+\item Project -> Signal Path Setup -> Level을 활성화 합니다.
+	\begin{itemize}
+	\item Sampling rate: 48kHz, Bit depth: 16bits
+	\item Waveform: sine, Frequency: 1kHz, Level: -12dBFS (25\%FS, 500mVrms)
+	\item 특별한 언급이 없는 한, 채널 L/R은 모두 같은 크기, 같은 위상의 신호를 넣어야 합니다.
+	\end{itemize}
+\end{itemize}
+
+\begin{figure}[r]
+	\includegraphics[height=0.4\textwidth]{figure/apsetting/signalPath.png}
+\end{figure}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{THD+N Check}
+\begin{itemize}
+\item 테스트 신호는 Audio Precision에서 재생하는 사운드로 HDMI 혹은 unbalaced (RCA)를 이용합니다.
+\item Project -> Signal Path Setup -> THD+N Ratio를 활성화 합니다.
+	\begin{itemize}
+	\item Waveform: sine, Level: 0dBFS (100\%FS, 2Vrms)
+	\item 스펙항목의 Frequency를 입력 합니다.
+	\end{itemize}
+\end{itemize}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/apsetting/thdn.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Interchannel Phase Check}
+\begin{itemize}
+\item 테스트 신호는 Audio Precision에서 재생하는 사운드로 HDMI 혹은 unbalaced (RCA)를 이용합니다.
+\item Project -> Interchannel Phase를 활성화 합니다.
+	\begin{itemize}
+	\item Waveform: sine, Level: -12dBFS (25\%FS, 0.5Vrms)
+	\item Ref Channel: Ch1, Meter Range: -180 -> 180 deg
+	\item 스펙항목의 Frequency를 입력 합니다.
+	\end{itemize}
+\end{itemize}
+
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/apsetting/interchannelPhase.png}
+\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Frequency Response Check}
+\begin{itemize}
+\item 테스트 신호는 Audio Precision에서 재생하는 사운드로 HDMI 혹은 unbalaced (RCA)를 이용합니다.
+\item Project -> Frequency Response -> Level을 활성화 합니다.
+	\begin{itemize}
+	\item Start Frequency: 20Hz, Stop Frequency: 20kHz
+	\item Level: -12dBFS (25\%FS, 500mVrms)
+	\item Pre-Sweep: 100ms, Sweep: 3s
+	\end{itemize}
+\item 기능이 off일 때를 기준 (ref)으로 하고, on일 때의 출력레벨 차이값을 측정합니다.
+\end{itemize}
+
+\begin{figure}[r]
+\includegraphics[height=0.4\textwidth]{figure/apsetting/frequencyResponse.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Level Check}
+\begin{itemize}
+\item 테스트 신호는 Audio Precision에서 재생하는 사운드로 HDMI 혹은 unbalaced (RCA)를 이용합니다.
+\item Project -> Signal Path Setup -> Level을 활성화 합니다.
+	\begin{itemize}
+	\item Waveform: sine, Level: -12dBFS (25\%FS, 500mVrms)
+	\item 스펙항목의 Frequency를 입력 합니다.
+	\end{itemize}
+\item 기능이 off일 때를 기준 (ref)으로 하고, on일 때의 출력레벨 차이값을 측정합니다.
+\end{itemize}
+
+\begin{figure}[r]
+\includegraphics[height=0.4\textwidth]{figure/apsetting/level.png}
+\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Antiphase Level Check}
+\begin{itemize}
+\item 테스트 신호는 Audio Precision에서 재생하는 사운드로 HDMI 혹은 unbalaced (RCA)를 이용합니다.
+\item Project -> Signal Path Setup -> Level을 활성화 합니다.
+	\begin{itemize}
+	\item Waveform: split phase, Level: -12dBFS (25\%FS, 500mVrms), Phase B: 180 deg
+	\item 스펙항목의 Frequency를 입력 합니다.
+	\end{itemize}
+\item 기능이 off일 때를 기준 (ref)으로 하고, on일 때의 출력레벨 차이값을 측정합니다.
+\end{itemize}
+
+\begin{figure}[r]
+\includegraphics[height=0.4\textwidth]{figure/apsetting/antiphaseLevel.png}
+\end{figure}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Autovolume Level Check}
+\begin{itemize}
+\item 테스트 신호는 Audio Precision에서 재생하는 사운드로 HDMI 혹은 USB 입력을 이용합니다.
+\item Project -> Signal Path Setup -> Level을 활성화 합니다.
+\item 테스트 입력
+	\begin{itemize}
+	\item Compensation 테스트
+		\begin{itemize}
+		\item USB 입력 (Autovolume.wav/mp3) 혹은 AP의 HDMI Source (sine, 1kHz, 16\%FS)
+		\end{itemize}
+	\item 1번 테스트
+		\begin{itemize}
+		\item USB 입력 (autovolume1.wav/mp3) 혹은 AP의 HDMI Source (sine, 1kHz, 1\%FS)
+		\end{itemize}
+	\item 2번 테스트
+		\begin{itemize}
+		\item USB 입력 (autovolume2.wav/mp3) 혹은 AP의 HDMI Source (sine, 1kHz, 90\%FS)
+		\end{itemize}
+	\end{itemize}
+\item 기능이 off일 때를 기준 (ref)으로 하고, on일 때의 출력레벨 차이값을 측정합니다.
+\item Compensation Test의 측정값을 Autovolume Test1, Autovolume Test2의 결과에 보상합니다.
+\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Impulse Response Check}
+\begin{itemize}
+\item 테스트 신호는 Audio Precision에서 재생하는 사운드로 HDMI 혹은 unbalaced (RCA)를 이용합니다.
+\item Project -> Continuous Sweep -> Impulse Response를 활성화 합니다.
+	\begin{itemize}
+	\item Start Frequency: 20Hz, Stop Frequency: 20kHz
+	\item Level: -12dBFS (25\%FS, 500mVrms)
+	\item Pre-Sweep: 100ms, Sweep: 3s
+	\end{itemize}
+\end{itemize}
+
+\begin{figure}[r]
+\includegraphics[height=0.4\textwidth]{figure/apsetting/impulseResponse.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{참고}
+	\begin{itemize}
+	\item 본 매뉴얼은 APx500 v3.4버전 프로그램을 기준으로 작성되었습니다.
+	\end{itemize}
+
+	\begin{figure}
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{figure/ap/about_apx500.jpg}
+		\end{center}
+	\end{figure}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{모델}
+\tableofcontents
+\huge
+\begin{itemize}
+\huge \item LF63
+\huge \item UF64
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{}
+\tableofcontents
+\huge
+\begin{itemize}
+\huge \item 2spk
+	\begin{itemize}
+	\large \item LF63
+	\large \item LF64
+	\end{itemize}
+\huge \item 4.2spk
+	\begin{itemize}
+	\large \item UF95
+	\end{itemize}
+\huge \item 4spk
+	\begin{itemize}
+	\large \item UF85
+	\end{itemize}
+\huge \item 4spk, OLED
+	\begin{itemize}
+	\large \item EG96
+	\end{itemize}			
+\end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{itemize/enumerate body begin}{\tiny}
+\setbeamertemplate{itemize/enumerate subbody begin}{\tiny}
+\setbeamertemplate{itemize/enumerate subsubbody begin}{\tiny}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] THD+N}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item THD+N Check
+	\begin{itemize}
+	\item 1kHz에서 3\% 이하
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{black}{Off} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & \color{blue}{Vol.100} & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Interchannel Phase Check}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Interchannel Phase Check
+	\begin{itemize}
+	\item 500Hz에서 \(20^\circ\) 이내
+	\item 1kHz에서 \(20^\circ\) 이내
+	\item 12kHz에서 \(20^\circ\) 이내
+	\item 20kHz에서 \(20^\circ\) 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{black}{Off} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Clearvoice: level +1}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0±1dBr 이내
+	\item 1.3Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+1} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/cv1.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Clearvoice: level +2}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\item 1.3kHz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 0.5±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+2} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/cv2.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Clearvoice: level +3}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\item 1.3kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 1.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+3} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/cv3.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Autovolume}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item Compensation Test
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값을 XdB로 설정
+		\end{itemize}
+	\item Autovolume Test 1
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값이 (8+X)±2dBr 이내
+		\end{itemize}
+	\item Autovolume Test 2
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값이 (-13+X)±2dBr 이내
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{blue}{On} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Surround}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}\vspace{-3mm}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz-100Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 500Hz-20kHz에서 ref 신호와의 레벨 차이값이 3.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{blue}{On} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/surround.png}
+\end{figure}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Smart Sound Home}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 4.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 3.0±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 4.0±2dBr 이내
+  \end{itemize}
+\item Antiphase Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 10.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 10.0±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 10.0±2dBr 이내
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{blue}{On} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Smart Sound Store}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 7.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 6.0±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 7.0±2dBr 이내
+  \end{itemize}
+\item Antiphase Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 13.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 13.0±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 13.0±2dBr 이내
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{blue}{On} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF64] 3D Sound Zooming}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 4.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 3.0±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 4.0±2dBr 이내
+  \end{itemize}
+\item Antiphase Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 10.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 10.0±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 10.0±2dBr 이내
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{blue}{On} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Sound Mode - News}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 2.5±1dBr 이내
+	\item 1.3Hz에서 ref 신호와의 레벨 차이값이 6.5±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 6.5±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 2.5±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{News} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/news.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Sound Mode - Music}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz에서 ref 신호와의 레벨 차이값이 -10.0dBr 이하
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 6.0±1dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 6.0±1dBr 이내
+	\item 19kHz에서 ref 신호와의 레벨 차이값이 8.5±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Music} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/music.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Sound Mode - Cinema}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 6.0±1dBr 이내
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 15kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Cinema} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/cinema.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Sound Mode - Game}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 2.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 0.5±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 2.5±2dBr 이내
+  \end{itemize}
+\item Antiphase Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 8.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 7.5±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 8.5±2dBr 이내
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Game} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Sound Mode - Sports (Soccer)}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 4.5±1dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 15kHz에서 ref 신호와의 레벨 차이값이 10.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Sports} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/sports.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Sound Mode - Punk}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 200Hz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 7.5±1dBr 이내
+	\item 4kHz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\item 8kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Punk} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/punk.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Sound Mode - Pagode}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 6.0±1dBr 이내
+	\item 200Hz에서 ref 신호와의 레벨 차이값이 2.0±1dBr 이내
+	\item 600Hz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\item 4kHz에서 ref 신호와의 레벨 차이값이 1.5±1dBr 이내
+	\item 15kHz에서 ref 신호와의 레벨 차이값이 3.5±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Pagode} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/pagode.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Sound Mode - Sertawego}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 3.5±1dBr 이내
+	\item 200Hz에서 ref 신호와의 레벨 차이값이 2.5±1dBr 이내
+	\item 700Hz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\item 2kHz에서 ref 신호와의 레벨 차이값이 1.5±1dBr 이내
+	\item 8kHz에서 ref 신호와의 레벨 차이값이 3.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Sertawego} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/sertawego.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63] Sound Optimizer - Stand Type}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 110Hz에서 ref 신호와의 레벨 차이값이 -3.0±2dBr 이내
+	\item 1kHz-20kHz에서 ref 신호와의 레벨 차이값이 0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{blue}{On} & \color{blue}{Standtype} & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/standtype.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF64] Sound Optimizer - Stand Type}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 -6.0±2dBr 이내
+	\item 1kHz-20kHz에서 ref 신호와의 레벨 차이값이 0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{blue}{On} & \color{blue}{Standtype} & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/standtype.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] Sound Optimizer - Wall Mount}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 60Hz에서 ref 신호와의 레벨 차이값이 -4.0±2dBr 이내
+	\item 1kHz-20kHz에서 ref 신호와의 레벨 차이값이 0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{blue}{On} & \color{blue}{Wallmount} & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/wallmount.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[LF63, UF64] 5-Band User EQ}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 100Hz, 300Hz, 1kHz, 3kHz, 10kHz에서 +10과 -10에서의 출력레벨과 ref와의 출력레벨 차이값이 4dBr 이상
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{User EQ±10} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/2spk/5_band_user_eq.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{}
+\tableofcontents
+\huge
+\begin{itemize}
+\huge \item UF95
+\end{itemize}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{UF95 테스트 스피커}
+\begin{itemize}
+\huge \item 테스트 스피커
+	\begin{itemize}
+	\large \item Front Left/Right 스피커 (FL, FR)
+	\large \item Twitter Left/Right 스피커 (TL, TR)
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{itemize/enumerate body begin}{\tiny}
+\setbeamertemplate{itemize/enumerate subbody begin}{\tiny}
+\setbeamertemplate{itemize/enumerate subsubbody begin}{\tiny}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] Init Test}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}\vspace{-3mm}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz-20kHz에서 ±1dBr 오차 이내의 flat한 주파수응답 특성을 확인
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] THD+N}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item THD+N Check
+	\begin{itemize}
+	\item 1kHz에서 3\% 이하
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{black}{Off} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & \color{blue}{Vol.100} & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] Interchannel Phase Check}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Interchannel Phase Check
+	\begin{itemize}
+	\item 500Hz에서 \(20^\circ\) 이내
+	\item 1kHz에서 \(20^\circ\) 이내
+	\item 12kHz에서 \(20^\circ\) 이내
+	\item 20kHz에서 \(20^\circ\) 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{black}{Off} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] Clearvoice: level +1}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0±1dBr 이내
+	\item 1.3Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+1} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/cv1.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] Clearvoice: level +2}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\item 1.3kHz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 0.5±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+2} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/cv2.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] Clearvoice: level +3}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\item 1.3kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 1.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+3} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/cv3.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] Autovolume}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item Compensation Test
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값을 XdB로 설정
+		\end{itemize}
+	\item Autovolume Test 1
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값이 (8+X)±2dBr 이내
+		\end{itemize}
+	\item Autovolume Test 2
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값이 (-13+X)±2dBr 이내
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{blue}{On} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR] Surround}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}\vspace{-3mm}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz-20kHz에서 ref 신호와의 레벨 차이값이 2.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 9.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 9.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 9.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{blue}{On} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/surround.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, TL/TR] Surround}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}\vspace{-3mm}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz-20kHz에서 ref 신호와의 레벨 차이값이 2.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 12.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 11.3±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 13.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{blue}{On} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR] Smart Sound Home}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 2.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 2.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 2.1±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 7.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 6.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 6.5±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{blue}{On} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, TL/TR] Smart Sound Home}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 2.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 2.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 11.3±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 11.2±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 14.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{blue}{On} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR] Smart Sound Store}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 10.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 9.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 10.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{blue}{On} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, TL/TR] Smart Sound Store}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 15.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 14.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 13.5±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 10.2±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 17.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{blue}{On} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR] 3D Sound Zooming}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 2.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 2.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 2.1±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 7.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 6.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 7.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{blue}{On} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, TL/TR] 3D Sound Zooming}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 2.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 2.1±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 11.2±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 11.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 14.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{blue}{On} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] Sound Mode - News}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 2.5±1dBr 이내
+	\item 1.3Hz에서 ref 신호와의 레벨 차이값이 6.5±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 6.5±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 2.5±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{News} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/news.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] Sound Mode - Music}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz에서 ref 신호와의 레벨 차이값이 -10.0dBr 이하
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 1.5±1dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 3.0±1dBr 이내
+	\item 19kHz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Music} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/music.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR] Sound Mode - Cinema}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 3.0±1dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 11.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 10.6±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 11.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Cinema} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/cinema_12.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, TL/TR] Sound Mode - Cinema}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+  \item 100Hz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 3.0±1dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 14.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 12.6±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 15.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Cinema} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/cinema_34.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR] Sound Mode - Game}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 2.8±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 2.5±2dBr 이내
+  \end{itemize}
+\item Antiphase Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 7.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 6.0±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 7.0±2dBr 이내
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Game} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, TL/TR] Sound Mode - Game}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 2.5±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 2.4±2dBr 이내
+  \end{itemize}
+\item Antiphase Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 11.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 11.0±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 14.0±2dBr 이내
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Game} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR] Sound Mode - Sports (Soccer)}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 2kHz에서 ref 신호와의 레벨 차이값이 8.5±1dBr 이내
+	\item 10kHz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 9.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 12.4±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 14.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Sports} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/sports_12.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, TL/TR] Sound Mode - Sports (Soccer)}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+  \item 100Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+  \item 2kHz에서 ref 신호와의 레벨 차이값이 8.5±1dBr 이내
+  \item 10kHz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 14.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 17.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 17.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Sports} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/sports_34.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] Sound Optimizer - Stand Type}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 110Hz에서 ref 신호와의 레벨 차이값이 -4.0±2dBr 이내
+	\item 1kHz-20kHz에서 ref 신호와의 레벨 차이값이 0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{blue}{On} & \color{blue}{Standtype} & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/standtype.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] Sound Optimizer - Wall Mount}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 60Hz에서 ref 신호와의 레벨 차이값이 -4.0±2dBr 이내
+	\item 1kHz-20kHz에서 ref 신호와의 레벨 차이값이 0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{blue}{On} & \color{blue}{Wallmount} & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/wallmount.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] 5-Band User EQ}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 100Hz, 300Hz, 1kHz, 3kHz, 10kHz에서 +10과 -10에서의 출력레벨과 ref와의 출력레벨 차이값이 4dBr 이상
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{User EQ±10} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/5_band_user_eq.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF95, FL/FR/TL/TR] High Resolution}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{blue}{On} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Impulse Response Check
+  \begin{itemize}
+  \item max impulse를 ref로 정의 (시간: 0s, 크기: 1.0)
+  \item 8.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 11.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 14.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 18.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 주요한 impulse는 위의 5구간에서 나타나며, 20ms 이후의 impulse는 분석하지 않음
+  \item Left/Right의 3rd, 4th impulse는 허용오차 범위내에서 측정 결과가 다름
+  \item AMP와 AP의 연결방법에 의하여 y축 대칭의 결과가 발생
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{black}{Standard} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+ & & & \\
+ & & & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF95/highresolution.png}
+\end{figure}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{}
+\tableofcontents
+\huge
+\begin{itemize}
+\huge \item UF85
+\end{itemize}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{UF85 테스트 스피커}
+\begin{itemize}
+\huge \item 테스트 스피커
+	\begin{itemize}
+	\large \item Front Left/Right 스피커 (FL, FR)
+	\large \item Twitter Left/Right 스피커 (TL, TR)
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{itemize/enumerate body begin}{\tiny}
+\setbeamertemplate{itemize/enumerate subbody begin}{\tiny}
+\setbeamertemplate{itemize/enumerate subsubbody begin}{\tiny}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Init Test}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}\vspace{-3mm}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz-20kHz에서 ±1dBr 오차 이내의 flat한 주파수응답 특성을 확인
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] THD+N}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item THD+N Check
+	\begin{itemize}
+	\item 1kHz에서 3\% 이하
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{black}{Off} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & \color{blue}{Vol.100} & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Interchannel Phase Check}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Interchannel Phase Check
+	\begin{itemize}
+	\item 500Hz에서 \(20^\circ\) 이내
+	\item 1kHz에서 \(20^\circ\) 이내
+	\item 12kHz에서 \(20^\circ\) 이내
+	\item 20kHz에서 \(20^\circ\) 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{black}{Off} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Clearvoice: level +1}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0±1dBr 이내
+	\item 1.3Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+1} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/cv1.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Clearvoice: level +2}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\item 1.3kHz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 0.5±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+2} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/cv2.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Clearvoice: level +3}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\item 1.3kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 1.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+3} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/cv3.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Autovolume}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item Compensation Test
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값을 XdB로 설정
+		\end{itemize}
+	\item Autovolume Test 1
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값이 (8+X)±2dBr 이내
+		\end{itemize}
+	\item Autovolume Test 2
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값이 (-13+X)±2dBr 이내
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{blue}{On} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Surround}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}\vspace{-3mm}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz-20kHz에서 ref 신호와의 레벨 차이값이 2.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 12.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 10.7±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 9.3±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{blue}{On} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/surround.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Smart Sound Home}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}	
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 12.7±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 12.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 14.8±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{blue}{On} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Smart Sound Store}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 15.7±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 14.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 17.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{blue}{On} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] 3D Sound Zooming}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 15.7±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 14.7±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 17.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{blue}{On} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Sound Mode - News}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 2.5±1dBr 이내
+	\item 1.3Hz에서 ref 신호와의 레벨 차이값이 6.5±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 6.5±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 2.5±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{News} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/news.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Sound Mode - Music}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz에서 ref 신호와의 레벨 차이값이 -10.0dBr 이하
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 1.5±1dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 3.0±1dBr 이내
+	\item 19kHz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Music} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/music.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Sound Mode - Cinema}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 4.5±1dBr 이내
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 6.0±1dBr 이내
+	\item 1.5kHz에서 ref 신호와의 레벨 차이값이 8.0±1dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 14.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 16.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 15.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Cinema} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/cinema.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Sound Mode - Game}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 4.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 4.0±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 2.5±2dBr 이내
+  \end{itemize}
+\item Antiphase Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 4.5±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 8.0±2dBr 이내
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Game} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Sound Mode - Sports (Soccer)}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\item 2kHz에서 ref 신호와의 레벨 차이값이 10.5±1dBr 이내
+	\item 10kHz에서 ref 신호와의 레벨 차이값이 6.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 5.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 14.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 13.5±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Sports} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/sports.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Sound Optimizer - Stand Type}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 -3.0±2dBr 이내
+	\item 1kHz-20kHz에서 ref 신호와의 레벨 차이값이 0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{blue}{On} & \color{blue}{Standtype} & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/standtype.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] Sound Optimizer - Wall Mount}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 60Hz에서 ref 신호와의 레벨 차이값이 -4.0±2dBr 이내
+	\item 1kHz-20kHz에서 ref 신호와의 레벨 차이값이 0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{blue}{On} & \color{blue}{Wallmount} & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/wallmount.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] 5-Band User EQ}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 100Hz, 300Hz, 1kHz, 3kHz, 10kHz에서 +10과 -10에서의 출력레벨과 ref와의 출력레벨 차이값이 4dBr 이상
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{User EQ±10} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/5_band_user_eq.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[UF85, FL/FR/TL/TR] High Resolution}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{blue}{On} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Impulse Response Check
+  \begin{itemize}
+  \item max impulse를 ref로 정의 (시간: 0s, 크기: 1.0)
+  \item 8.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 11.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 14.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 18.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 주요한 impulse는 위의 5구간에서 나타나며, 20ms 이후의 impulse는 분석하지 않음
+  \item Left/Right의 3rd, 4th impulse는 허용오차 범위내에서 측정 결과가 다름
+  \item AMP와 AP의 연결방법에 의하여 y축 대칭의 결과가 발생
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{black}{Standard} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+ & & & \\
+ & & & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/UF85/highresolution.png}
+\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{}
+\tableofcontents
+\huge
+\begin{itemize}
+\huge \item EG96
+\end{itemize}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{EG96 테스트 스피커}
+\begin{itemize}
+\huge \item 테스트 스피커
+	\begin{itemize}
+	\large \item Front Left/Right 스피커 (FL, FR)
+	\large \item Twitter Left/Right 스피커 (TL, TR)
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{itemize/enumerate body begin}{\tiny}
+\setbeamertemplate{itemize/enumerate subbody begin}{\tiny}
+\setbeamertemplate{itemize/enumerate subsubbody begin}{\tiny}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Init Test}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}\vspace{-3mm}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz-20kHz에서 ±1dBr 오차 이내의 flat한 주파수응답 특성을 확인
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] THD+N}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item THD+N Check
+	\begin{itemize}
+	\item 1kHz에서 3\% 이하
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{black}{Off} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & \color{blue}{Vol.100} & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Interchannel Phase Check}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Interchannel Phase Check
+	\begin{itemize}
+	\item 500Hz에서 \(20^\circ\) 이내
+	\item 1kHz에서 \(20^\circ\) 이내
+	\item 12kHz에서 \(20^\circ\) 이내
+	\item 20kHz에서 \(20^\circ\) 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{black}{Off} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Clearvoice: level +1}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0±1dBr 이내
+	\item 1.3Hz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 4.0±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+1} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/cv1.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Clearvoice: level +2}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\item 1.3kHz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 0.5±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+2} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/cv2.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Clearvoice: level +3}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 0.0±1dBr 이내
+	\item 1.3kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 1.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{blue}{On} & \color{blue}{+3} & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/cv3.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Autovolume}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item Compensation Test
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값을 XdB로 설정
+		\end{itemize}
+	\item Autovolume Test 1
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값이 (8+X)±2dBr 이내
+		\end{itemize}
+	\item Autovolume Test 2
+		\begin{itemize}\tiny
+		\item ref 신호와의 레벨 차이값이 (-13+X)±2dBr 이내
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{blue}{On} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Surround}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}\vspace{-3mm}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz-20kHz에서 ref 신호와의 레벨 차이값이 2.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 12.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 10.7±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 9.3±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{blue}{On} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/surround.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Surround Store}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}\vspace{-3mm}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz-20kHz에서 ref 신호와의 레벨 차이값이 3.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 13.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 12.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 13.5±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{blue}{On} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/surround_store.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Smart Sound}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}	
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 13.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 12.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 14.8±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{blue}{On} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Smart Sound Store}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 5.5±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 5.5±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 5.5±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 16.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 15.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 18.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{blue}{On} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] 3D Sound Zooming}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 4.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 1.5±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}	
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 12.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 11.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 14.5±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{blue}{On} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] 3D Sound Zooming Store}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 4.8±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 3.0±2dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 10.5±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 7.3±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 10.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{blue}{On} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Sound Mode - News}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 80Hz에서 ref 신호와의 레벨 차이값이 2.5±1dBr 이내
+	\item 1.3Hz에서 ref 신호와의 레벨 차이값이 6.5±1dBr 이내
+	\item 3kHz에서 ref 신호와의 레벨 차이값이 6.5±1dBr 이내
+	\item 12kHz에서 ref 신호와의 레벨 차이값이 2.5±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{News} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/news.png}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Sound Mode - Music}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 20Hz에서 ref 신호와의 레벨 차이값이 -10.0dBr 이하
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 1.5±1dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 3.0±1dBr 이내
+	\item 19kHz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Music} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/music.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Sound Mode - Cinema}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 4.5±1dBr 이내
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 6.0±1dBr 이내
+	\item 1.5kHz에서 ref 신호와의 레벨 차이값이 8.0±1dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 5.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 15.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 16.5±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 16.0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Cinema} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/cinema.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Sound Mode - Cinema Store}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\item 1.5kHz에서 ref 신호와의 레벨 차이값이 9.0±1dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 6.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 15.5±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 17.3±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 16.5±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Cinema} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/cinema_store.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Sound Mode - Game}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 4.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 1.5±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 2.2±2dBr 이내
+  \end{itemize}
+\item Antiphase Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 15.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 11.0±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 14.5±2dBr 이내
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Game} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Sound Mode - Game Store}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 4.5±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 1.7±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 2.5±2dBr 이내
+  \end{itemize}
+\item Antiphase Level Check
+  \begin{itemize}
+  \item 50Hz에서 ref 신호와의 레벨 차이값이 15.0±2dBr 이내
+  \item 1kHz에서 ref 신호와의 레벨 차이값이 11.5±2dBr 이내
+  \item 5kHz에서 ref 신호와의 레벨 차이값이 15.0±2dBr 이내
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Game} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Sound Mode - Sports (Soccer)}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 4.5±1dBr 이내
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 4.5±1dBr 이내
+	\item 2kHz에서 ref 신호와의 레벨 차이값이 10.0±1dBr 이내
+	\item 10kHz에서 ref 신호와의 레벨 차이값이 5.5±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 5.5±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 10.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 8.5±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Sports} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/sports.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Sound Mode - Sports (Soccer) Store}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 6.0±1dBr 이내
+	\item 100Hz에서 ref 신호와의 레벨 차이값이 6.0±1dBr 이내
+	\item 2kHz에서 ref 신호와의 레벨 차이값이 12.0±1dBr 이내
+	\item 10kHz에서 ref 신호와의 레벨 차이값이 7.0±1dBr 이내
+	\end{itemize}
+\item Antiphase Level Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 15.0±2dBr 이내
+	\item 1kHz에서 ref 신호와의 레벨 차이값이 19.0±2dBr 이내
+	\item 5kHz에서 ref 신호와의 레벨 차이값이 18.5±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{Sports} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/sports_store.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Sound Optimizer - Stand Type}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 50Hz에서 ref 신호와의 레벨 차이값이 -6.0±2dBr 이내
+	\item 1kHz-20kHz에서 ref 신호와의 레벨 차이값이 0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{blue}{On} & \color{blue}{Standtype} & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/standtype.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] Sound Optimizer - Wall Mount}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 60Hz에서 ref 신호와의 레벨 차이값이 -4.0±2dBr 이내
+	\item 1kHz-20kHz에서 ref 신호와의 레벨 차이값이 0±2dBr 이내
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & Standard & \\
+Sound Optimizer & \color{blue}{On} & \color{blue}{Wallmount} & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/wallmount.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] 5-Band User EQ}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{black}{Off} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Frequency Response Check
+	\begin{itemize}
+	\item 100Hz, 300Hz, 1kHz, 3kHz, 10kHz에서 +10과 -10에서의 출력레벨과 ref와의 출력레벨 차이값이 4dBr 이상
+	\end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{blue}{User EQ±10} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/5_band_user_eq.png}
+\end{figure}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{[EG96, FL/FR/TL/TR] High Resolution}
+\begin{tiny}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Function & Off/On & Option & Specification \\
+\midrule
+Audio EQ & \color{blue}{On} & Instart &
+\multirow{10}{60mm}{
+\begin{itemize}
+\item Impulse Response Check
+  \begin{itemize}
+  \item max impulse를 ref로 정의 (시간: 0s, 크기: 1.0)
+  \item 8.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 11.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 14.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 18.5±1ms구간의 max impulse가 ref대비 0.07±0.03 이내
+  \item 주요한 impulse는 위의 5구간에서 나타나며, 20ms 이후의 impulse는 분석하지 않음
+  \item Left/Right의 3rd, 4th impulse는 허용오차 범위내에서 측정 결과가 다름
+  \item AMP와 AP의 연결방법에 의하여 y축 대칭의 결과가 발생
+  \end{itemize}
+\end{itemize}
+} \\
+Sound Engine & \color{blue}{On} & Instart & \\
+Clearvoice & \color{black}{Off} & & \\
+Autovolume & \color{black}{Off} & & \\
+Surround & \color{black}{Off} & & \\
+Smart Sound & \color{black}{Off} & & \\
+3D Sound Zooming & \color{black}{Off} & & \\
+Sound Mode & \color{blue}{On} & \color{black}{Standard} & \\
+Sound Optimizer & \color{black}{Off} & & \\
+OSD Volume & \color{blue}{On} & Vol.40 & \\
+ & & & \\
+ & & & \\
+\midrule
+\end{tabular}
+\end{tiny}
+
+\begin{figure}[b]
+\includegraphics[height=0.4\textwidth]{figure/EG96/highresolution.png}
+\end{figure}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

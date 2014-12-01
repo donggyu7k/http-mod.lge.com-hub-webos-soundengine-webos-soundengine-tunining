@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<LGSE_API version="6.0">
+	<libLGSE_Compatibility>0x00006006</libLGSE_Compatibility>
+	<LGSE_FUNCTION>
+		<ID>010</ID>
+		<NAME>INPUTCHECK</NAME>
+		<FLAG>0x00000000</FLAG>
+		<INIT>
+			<value id="0" name="LEFT" index="0">0xffc0411f</value>
+			<value id="1" name="LEFT" index="1">0x001fd538</value>
+			<value id="2" name="LEFT" index="2">0xffffea9c</value>
+			<value id="3" name="LEFT" index="3">0x00000000</value>
+			<value id="4" name="LEFT" index="4">0x00001564</value>
+			<value id="5" name="RIGHT" index="0">0xffc0b687</value>
+			<value id="6" name="RIGHT" index="1">0x001fd538</value>
+			<value id="7" name="RIGHT" index="2">0xffffea9c</value>
+			<value id="8" name="RIGHT" index="3">0x00000000</value>
+			<value id="9" name="RIGHT" index="4">0x00001564</value>
+		</INIT>
+		<VAR>
+			<value id="0" name="MODE">0x00000003</value>
+		</VAR>
+	</LGSE_FUNCTION>
+</LGSE_API>

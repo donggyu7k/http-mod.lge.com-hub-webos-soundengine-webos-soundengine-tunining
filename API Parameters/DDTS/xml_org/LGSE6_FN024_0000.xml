@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<LGSE_API version="6.0">
+	<libLGSE_Compatibility>0x0000600b</libLGSE_Compatibility>
+	<LGSE_FUNCTION>
+		<ID>024</ID>
+		<NAME>HARMONIZERS</NAME>
+		<FLAG>0x00000000</FLAG>
+		<INIT>
+			<value id="0" name="CLIPPING_LEVEL">0x00000100</value>
+			<value id="1" name="HMZ_GAIN">0x0000f000</value>
+			<value id="2" name="HPF_A" index="0">0xfff12f9d</value>
+			<value id="3" name="HPF_A" index="1">0x0006b5fd</value>
+			<value id="4" name="HPF_B" index="0">0x000d6198</value>
+			<value id="5" name="HPF_B" index="1">0xffe53cd0</value>
+			<value id="6" name="HPF_B" index="2">0x000d6198</value>
+			<value id="7" name="LPF_A" index="0">0xfff12f9d</value>
+			<value id="8" name="LPF_A" index="1">0x0006b5fd</value>
+			<value id="9" name="LPF_B" index="0">0x0005f966</value>
+			<value id="10" name="LPF_B" index="1">0x000bf2cc</value>
+			<value id="11" name="LPF_B" index="2">0x0005f966</value>
+		</VAR>
+	</LGSE_FUNCTION>
+</LGSE_API>

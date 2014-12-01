@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<LGSE_API version="6.0">
+	<libLGSE_Compatibility>0x00006009</libLGSE_Compatibility>
+	<LGSE_FUNCTION>
+		<ID>MAIN</ID>
+		<NAME>MAIN_DEFUALT_INIT</NAME>
+		<FLAG>0x00000003</FLAG>
+		<INIT>
+			<value id="0" name="MAIN_NUM_OF_INPUT">0x00000002</value>
+			<value id="1" name="MAIN_NUM_OF_OUTPUT">0x00000002</value>
+			<value id="2" name="MAIN_NUM_OF_SPEAKERS">0x00000002</value>
+			<value id="3" name="MAIN_INPUT_SAMPLING_FREUENCY">0x0000bb80</value>
+			<value id="4" name="MAIN_OUTPUT_SAMPLING_FREUENCY">0x0000bb80</value>
+			<value id="5" name="MAIN_INTERLEAVED">0x00000001</value>
+			<value id="6" name="MAIN_BIT_PER_SAMPLE">0x00000010</value>
+			<value id="7" name="MAIN_FRAME_SIZE">0x00000100</value>
+			<value id="8" name="MAIN_FFT_SIZE">0x00000200</value>
+			<value id="9" name="MAIN_NUM_OF_BAND">0x00000014</value>
+		</INIT>
+		<VAR>
+			<value id="0" name="MIXER_FREQ_RAW">0x00000003</value>
+			<value id="1" name="MIXER_FREQ_HEIGHT">0x00000002</value>
+			<value id="2" name="MIXER_IVSE">0x00000001</value>
+		</VAR>
+	</LGSE_FUNCTION>
+</LGSE_API>

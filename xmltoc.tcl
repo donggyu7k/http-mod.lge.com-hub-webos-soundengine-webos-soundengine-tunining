@@ -3,7 +3,7 @@
 # api 파라메터가 저장된 경로
 set api_param_path "./"
 # 출력 파일이 저장될 경로
-set output_path "./"
+set output_path "./out"
 ######################################################################
 #Recursive glob function
 #procedure from http://paste.tclers.tk/1346

@@ -11,16 +11,16 @@
 			<value id="2" name="FILTER_COEFFICIENT" index="2">0x00201f4e</value>
 			<value id="3" name="FILTER_COEFFICIENT" index="3">0xffc0992a</value>
 			<value id="4" name="FILTER_COEFFICIENT" index="4">0x001f48ec</value>
-			<value id="5" name="FILTER_COEFFICIENT" index="5">0xffc40388</value>
-			<value id="6" name="FILTER_COEFFICIENT" index="6">0x001c118a</value>
-			<value id="7" name="FILTER_COEFFICIENT" index="7">0x0020824c</value>
-			<value id="8" name="FILTER_COEFFICIENT" index="8">0xffc40388</value>
-			<value id="9" name="FILTER_COEFFICIENT" index="9">0x001b8f3e</value>
-			<value id="10" name="FILTER_COEFFICIENT" index="10">0xffc73adb</value>
-			<value id="11" name="FILTER_COEFFICIENT" index="11">0x0019428d</value>
-			<value id="12" name="FILTER_COEFFICIENT" index="12">0x001f4e8f</value>
-			<value id="13" name="FILTER_COEFFICIENT" index="13">0xffc73adb</value>
-			<value id="14" name="FILTER_COEFFICIENT" index="14">0x0019f3fd</value>
+			<value id="5" name="FILTER_COEFFICIENT" index="5">0xffc5e6b1</value>
+			<value id="6" name="FILTER_COEFFICIENT" index="6">0x001a474d</value>
+			<value id="7" name="FILTER_COEFFICIENT" index="7">0x0020bd9f</value>
+			<value id="8" name="FILTER_COEFFICIENT" index="8">0xffc5e6b1</value>
+			<value id="9" name="FILTER_COEFFICIENT" index="9">0x001989ad</value>
+			<value id="10" name="FILTER_COEFFICIENT" index="10">0x00000000</value>
+			<value id="11" name="FILTER_COEFFICIENT" index="11">0x00000000</value>
+			<value id="12" name="FILTER_COEFFICIENT" index="12">0x00200000</value>
+			<value id="13" name="FILTER_COEFFICIENT" index="13">0x00000000</value>
+			<value id="14" name="FILTER_COEFFICIENT" index="14">0x00000000</value>
 			<value id="15" name="FILTER_COEFFICIENT" index="15">0x00000000</value>
 			<value id="16" name="FILTER_COEFFICIENT" index="16">0x00000000</value>
 			<value id="17" name="FILTER_COEFFICIENT" index="17">0x00200000</value>
@@ -35,14 +35,14 @@
 			<value id="26" name="GAIN" index="26">30</value>
 			<value id="27" name="Q" index="27">7</value>
 			<value id="28" name="TYPE" index="28">0</value>
-			<value id="29" name="FREQUENCY" index="29">400</value>
+			<value id="29" name="FREQUENCY" index="29">600</value>
 			<value id="30" name="GAIN" index="30">20</value>
 			<value id="31" name="Q" index="31">4</value>
 			<value id="32" name="TYPE" index="32">0</value>
-			<value id="33" name="FREQUENCY" index="33">1000</value>
-			<value id="34" name="GAIN" index="34">-20</value>
-			<value id="35" name="Q" index="35">7</value>
-			<value id="36" name="TYPE" index="36">0</value>
+			<value id="33" name="FREQUENCY" index="33">0</value>
+			<value id="34" name="GAIN" index="34">0</value>
+			<value id="35" name="Q" index="35">0</value>
+			<value id="36" name="TYPE" index="36">7</value>
 			<value id="37" name="FREQUENCY" index="37">0</value>
 			<value id="38" name="GAIN" index="38">0</value>
 			<value id="39" name="Q" index="39">0</value>

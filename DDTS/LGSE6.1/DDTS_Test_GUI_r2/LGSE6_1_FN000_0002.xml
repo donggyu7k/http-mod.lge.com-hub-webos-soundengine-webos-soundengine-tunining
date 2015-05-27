@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.0">
-	<libLGSE_Compatibility>0x00006006</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x06010002</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>000</ID>
 		<NAME>CLEARVOICE</NAME>
@@ -101,64 +101,64 @@
 			<value id="92" name="SDV_USER_CENTER_GAIN" index="77">0x00100000</value>
 			<value id="93" name="SDV_USER_CENTER_GAIN" index="78">0x00100000</value>
 			<value id="94" name="SDV_USER_CENTER_GAIN" index="79">0x00100000</value>
-			<value id="95" name="SDV_USER_CENTER_GAIN" index="80">0x00102f6e</value>
-			<value id="96" name="SDV_USER_CENTER_GAIN" index="81">0x0010f2b4</value>
-			<value id="97" name="SDV_USER_CENTER_GAIN" index="82">0x0014248f</value>
-			<value id="98" name="SDV_USER_CENTER_GAIN" index="83">0x0017f094</value>
-			<value id="99" name="SDV_USER_CENTER_GAIN" index="84">0x00195bb9</value>
-			<value id="100" name="SDV_USER_CENTER_GAIN" index="85">0x001a8dab</value>
-			<value id="101" name="SDV_USER_CENTER_GAIN" index="86">0x001adc61</value>
-			<value id="102" name="SDV_USER_CENTER_GAIN" index="87">0x001b2c01</value>
-			<value id="103" name="SDV_USER_CENTER_GAIN" index="88">0x001c2074</value>
-			<value id="104" name="SDV_USER_CENTER_GAIN" index="89">0x001d1d7e</value>
-			<value id="105" name="SDV_USER_CENTER_GAIN" index="90">0x001f3290</value>
-			<value id="106" name="SDV_USER_CENTER_GAIN" index="91">0x001fec98</value>
-			<value id="107" name="SDV_USER_CENTER_GAIN" index="92">0x001fec98</value>
-			<value id="108" name="SDV_USER_CENTER_GAIN" index="93">0x001fec98</value>
-			<value id="109" name="SDV_USER_CENTER_GAIN" index="94">0x001cc82c</value>
-			<value id="110" name="SDV_USER_CENTER_GAIN" index="95">0x0014248f</value>
+			<value id="95" name="SDV_USER_CENTER_GAIN" index="80">0x003298b0</value>
+			<value id="96" name="SDV_USER_CENTER_GAIN" index="81">0x003298b0</value>
+			<value id="97" name="SDV_USER_CENTER_GAIN" index="82">0x003298b0</value>
+			<value id="98" name="SDV_USER_CENTER_GAIN" index="83">0x00100000</value>
+			<value id="99" name="SDV_USER_CENTER_GAIN" index="84">0x00100000</value>
+			<value id="100" name="SDV_USER_CENTER_GAIN" index="85">0x00100000</value>
+			<value id="101" name="SDV_USER_CENTER_GAIN" index="86">0x00100000</value>
+			<value id="102" name="SDV_USER_CENTER_GAIN" index="87">0x00100000</value>
+			<value id="103" name="SDV_USER_CENTER_GAIN" index="88">0x00100000</value>
+			<value id="104" name="SDV_USER_CENTER_GAIN" index="89">0x00100000</value>
+			<value id="105" name="SDV_USER_CENTER_GAIN" index="90">0x00100000</value>
+			<value id="106" name="SDV_USER_CENTER_GAIN" index="91">0x00100000</value>
+			<value id="107" name="SDV_USER_CENTER_GAIN" index="92">0x00100000</value>
+			<value id="108" name="SDV_USER_CENTER_GAIN" index="93">0x00100000</value>
+			<value id="109" name="SDV_USER_CENTER_GAIN" index="94">0x00100000</value>
+			<value id="110" name="SDV_USER_CENTER_GAIN" index="95">0x00100000</value>
 			<value id="111" name="SDV_USER_CENTER_GAIN" index="96">0x00100000</value>
 			<value id="112" name="SDV_USER_CENTER_GAIN" index="97">0x00100000</value>
 			<value id="113" name="SDV_USER_CENTER_GAIN" index="98">0x00100000</value>
 			<value id="114" name="SDV_USER_CENTER_GAIN" index="99">0x00100000</value>
-			<value id="115" name="SDV_USER_CENTER_GAIN" index="100">0x0013e988</value>
-			<value id="116" name="SDV_USER_CENTER_GAIN" index="101">0x0013e988</value>
-			<value id="117" name="SDV_USER_CENTER_GAIN" index="102">0x0016160d</value>
-			<value id="118" name="SDV_USER_CENTER_GAIN" index="103">0x00187f55</value>
-			<value id="119" name="SDV_USER_CENTER_GAIN" index="104">0x001adc61</value>
-			<value id="120" name="SDV_USER_CENTER_GAIN" index="105">0x001b2c01</value>
-			<value id="121" name="SDV_USER_CENTER_GAIN" index="106">0x001bce08</value>
-			<value id="122" name="SDV_USER_CENTER_GAIN" index="107">0x001dcb1b</value>
-			<value id="123" name="SDV_USER_CENTER_GAIN" index="108">0x001f8f0b</value>
-			<value id="124" name="SDV_USER_CENTER_GAIN" index="109">0x001fec98</value>
-			<value id="125" name="SDV_USER_CENTER_GAIN" index="110">0x001fec98</value>
-			<value id="126" name="SDV_USER_CENTER_GAIN" index="111">0x001fec98</value>
-			<value id="127" name="SDV_USER_CENTER_GAIN" index="112">0x001fec98</value>
-			<value id="128" name="SDV_USER_CENTER_GAIN" index="113">0x001fec98</value>
-			<value id="129" name="SDV_USER_CENTER_GAIN" index="114">0x001a8dab</value>
-			<value id="130" name="SDV_USER_CENTER_GAIN" index="115">0x0012954b</value>
+			<value id="115" name="SDV_USER_CENTER_GAIN" index="100">0x003298b0</value>
+			<value id="116" name="SDV_USER_CENTER_GAIN" index="101">0x003298b0</value>
+			<value id="117" name="SDV_USER_CENTER_GAIN" index="102">0x003298b0</value>
+			<value id="118" name="SDV_USER_CENTER_GAIN" index="103">0x003298b0</value>
+			<value id="119" name="SDV_USER_CENTER_GAIN" index="104">0x003298b0</value>
+			<value id="120" name="SDV_USER_CENTER_GAIN" index="105">0x003298b0</value>
+			<value id="121" name="SDV_USER_CENTER_GAIN" index="106">0x003298b0</value>
+			<value id="122" name="SDV_USER_CENTER_GAIN" index="107">0x003298b0</value>
+			<value id="123" name="SDV_USER_CENTER_GAIN" index="108">0x00100000</value>
+			<value id="124" name="SDV_USER_CENTER_GAIN" index="109">0x00100000</value>
+			<value id="125" name="SDV_USER_CENTER_GAIN" index="110">0x00100000</value>
+			<value id="126" name="SDV_USER_CENTER_GAIN" index="111">0x00100000</value>
+			<value id="127" name="SDV_USER_CENTER_GAIN" index="112">0x00100000</value>
+			<value id="128" name="SDV_USER_CENTER_GAIN" index="113">0x00100000</value>
+			<value id="129" name="SDV_USER_CENTER_GAIN" index="114">0x00100000</value>
+			<value id="130" name="SDV_USER_CENTER_GAIN" index="115">0x00100000</value>
 			<value id="131" name="SDV_USER_CENTER_GAIN" index="116">0x00100000</value>
 			<value id="132" name="SDV_USER_CENTER_GAIN" index="117">0x00100000</value>
 			<value id="133" name="SDV_USER_CENTER_GAIN" index="118">0x00100000</value>
 			<value id="134" name="SDV_USER_CENTER_GAIN" index="119">0x00100000</value>
-			<value id="135" name="SDV_USER_CENTER_GAIN" index="120">0x00187f55</value>
-			<value id="136" name="SDV_USER_CENTER_GAIN" index="121">0x00187f55</value>
-			<value id="137" name="SDV_USER_CENTER_GAIN" index="122">0x001a3fdb</value>
-			<value id="138" name="SDV_USER_CENTER_GAIN" index="123">0x001d1d7e</value>
-			<value id="139" name="SDV_USER_CENTER_GAIN" index="124">0x001fec98</value>
-			<value id="140" name="SDV_USER_CENTER_GAIN" index="125">0x001fec98</value>
-			<value id="141" name="SDV_USER_CENTER_GAIN" index="126">0x001fec98</value>
-			<value id="142" name="SDV_USER_CENTER_GAIN" index="127">0x001fec98</value>
-			<value id="143" name="SDV_USER_CENTER_GAIN" index="128">0x001fec98</value>
-			<value id="144" name="SDV_USER_CENTER_GAIN" index="129">0x001fec98</value>
-			<value id="145" name="SDV_USER_CENTER_GAIN" index="130">0x001fec98</value>
-			<value id="146" name="SDV_USER_CENTER_GAIN" index="131">0x001fec98</value>
-			<value id="147" name="SDV_USER_CENTER_GAIN" index="132">0x001fec98</value>
-			<value id="148" name="SDV_USER_CENTER_GAIN" index="133">0x001fec98</value>
-			<value id="149" name="SDV_USER_CENTER_GAIN" index="134">0x001fec98</value>
-			<value id="150" name="SDV_USER_CENTER_GAIN" index="135">0x001e7cc4</value>
-			<value id="151" name="SDV_USER_CENTER_GAIN" index="136">0x001a8dab</value>
-			<value id="152" name="SDV_USER_CENTER_GAIN" index="137">0x0012954b</value>
+			<value id="135" name="SDV_USER_CENTER_GAIN" index="120">0x003298b0</value>
+			<value id="136" name="SDV_USER_CENTER_GAIN" index="121">0x003298b0</value>
+			<value id="137" name="SDV_USER_CENTER_GAIN" index="122">0x003298b0</value>
+			<value id="138" name="SDV_USER_CENTER_GAIN" index="123">0x003298b0</value>
+			<value id="139" name="SDV_USER_CENTER_GAIN" index="124">0x003298b0</value>
+			<value id="140" name="SDV_USER_CENTER_GAIN" index="125">0x003298b0</value>
+			<value id="141" name="SDV_USER_CENTER_GAIN" index="126">0x003298b0</value>
+			<value id="142" name="SDV_USER_CENTER_GAIN" index="127">0x003298b0</value>
+			<value id="143" name="SDV_USER_CENTER_GAIN" index="128">0x003298b0</value>
+			<value id="144" name="SDV_USER_CENTER_GAIN" index="129">0x003298b0</value>
+			<value id="145" name="SDV_USER_CENTER_GAIN" index="130">0x003298b0</value>
+			<value id="146" name="SDV_USER_CENTER_GAIN" index="131">0x003298b0</value>
+			<value id="147" name="SDV_USER_CENTER_GAIN" index="132">0x003298b0</value>
+			<value id="148" name="SDV_USER_CENTER_GAIN" index="133">0x003298b0</value>
+			<value id="149" name="SDV_USER_CENTER_GAIN" index="134">0x003298b0</value>
+			<value id="150" name="SDV_USER_CENTER_GAIN" index="135">0x003298b0</value>
+			<value id="151" name="SDV_USER_CENTER_GAIN" index="136">0x00100000</value>
+			<value id="152" name="SDV_USER_CENTER_GAIN" index="137">0x00100000</value>
 			<value id="153" name="SDV_USER_CENTER_GAIN" index="138">0x00100000</value>
 			<value id="154" name="SDV_USER_CENTER_GAIN" index="139">0x00100000</value>
 			<value id="155" name="SDV_USER_AMBIENT_GAIN" index="0">0x0014248f</value>
@@ -241,69 +241,69 @@
 			<value id="232" name="SDV_USER_AMBIENT_GAIN" index="77">0x00100000</value>
 			<value id="233" name="SDV_USER_AMBIENT_GAIN" index="78">0x00100000</value>
 			<value id="234" name="SDV_USER_AMBIENT_GAIN" index="79">0x00100000</value>
-			<value id="235" name="SDV_USER_AMBIENT_GAIN" index="80">0x000dc6a1</value>
-			<value id="236" name="SDV_USER_AMBIENT_GAIN" index="81">0x000dc6a1</value>
-			<value id="237" name="SDV_USER_AMBIENT_GAIN" index="82">0x000dc6a1</value>
-			<value id="238" name="SDV_USER_AMBIENT_GAIN" index="83">0x000dc6a1</value>
-			<value id="239" name="SDV_USER_AMBIENT_GAIN" index="84">0x000dc6a1</value>
-			<value id="240" name="SDV_USER_AMBIENT_GAIN" index="85">0x000dc6a1</value>
-			<value id="241" name="SDV_USER_AMBIENT_GAIN" index="86">0x000dc6a1</value>
-			<value id="242" name="SDV_USER_AMBIENT_GAIN" index="87">0x000dc6a1</value>
-			<value id="243" name="SDV_USER_AMBIENT_GAIN" index="88">0x000dc6a1</value>
-			<value id="244" name="SDV_USER_AMBIENT_GAIN" index="89">0x000dc6a1</value>
-			<value id="245" name="SDV_USER_AMBIENT_GAIN" index="90">0x000dc6a1</value>
-			<value id="246" name="SDV_USER_AMBIENT_GAIN" index="91">0x000dc6a1</value>
-			<value id="247" name="SDV_USER_AMBIENT_GAIN" index="92">0x000dc6a1</value>
-			<value id="248" name="SDV_USER_AMBIENT_GAIN" index="93">0x000dc6a1</value>
-			<value id="249" name="SDV_USER_AMBIENT_GAIN" index="94">0x000dc6a1</value>
-			<value id="250" name="SDV_USER_AMBIENT_GAIN" index="95">0x000dc6a1</value>
-			<value id="251" name="SDV_USER_AMBIENT_GAIN" index="96">0x000dc6a1</value>
-			<value id="252" name="SDV_USER_AMBIENT_GAIN" index="97">0x000dc6a1</value>
-			<value id="253" name="SDV_USER_AMBIENT_GAIN" index="98">0x000dc6a1</value>
-			<value id="254" name="SDV_USER_AMBIENT_GAIN" index="99">0x000dc6a1</value>
-			<value id="255" name="SDV_USER_AMBIENT_GAIN" index="100">0x000dc6a1</value>
-			<value id="256" name="SDV_USER_AMBIENT_GAIN" index="101">0x000dc6a1</value>
-			<value id="257" name="SDV_USER_AMBIENT_GAIN" index="102">0x000dc6a1</value>
-			<value id="258" name="SDV_USER_AMBIENT_GAIN" index="103">0x000dc6a1</value>
-			<value id="259" name="SDV_USER_AMBIENT_GAIN" index="104">0x000dc6a1</value>
-			<value id="260" name="SDV_USER_AMBIENT_GAIN" index="105">0x000dc6a1</value>
-			<value id="261" name="SDV_USER_AMBIENT_GAIN" index="106">0x000dc6a1</value>
-			<value id="262" name="SDV_USER_AMBIENT_GAIN" index="107">0x000dc6a1</value>
-			<value id="263" name="SDV_USER_AMBIENT_GAIN" index="108">0x000dc6a1</value>
-			<value id="264" name="SDV_USER_AMBIENT_GAIN" index="109">0x000dc6a1</value>
-			<value id="265" name="SDV_USER_AMBIENT_GAIN" index="110">0x000dc6a1</value>
-			<value id="266" name="SDV_USER_AMBIENT_GAIN" index="111">0x000dc6a1</value>
-			<value id="267" name="SDV_USER_AMBIENT_GAIN" index="112">0x000dc6a1</value>
-			<value id="268" name="SDV_USER_AMBIENT_GAIN" index="113">0x000dc6a1</value>
-			<value id="269" name="SDV_USER_AMBIENT_GAIN" index="114">0x000dc6a1</value>
-			<value id="270" name="SDV_USER_AMBIENT_GAIN" index="115">0x000dc6a1</value>
-			<value id="271" name="SDV_USER_AMBIENT_GAIN" index="116">0x000dc6a1</value>
-			<value id="272" name="SDV_USER_AMBIENT_GAIN" index="117">0x000dc6a1</value>
-			<value id="273" name="SDV_USER_AMBIENT_GAIN" index="118">0x000dc6a1</value>
-			<value id="274" name="SDV_USER_AMBIENT_GAIN" index="119">0x000dc6a1</value>
-			<value id="275" name="SDV_USER_AMBIENT_GAIN" index="120">0x000dc6a1</value>
-			<value id="276" name="SDV_USER_AMBIENT_GAIN" index="121">0x000dc6a1</value>
-			<value id="277" name="SDV_USER_AMBIENT_GAIN" index="122">0x000dc6a1</value>
-			<value id="278" name="SDV_USER_AMBIENT_GAIN" index="123">0x000dc6a1</value>
-			<value id="279" name="SDV_USER_AMBIENT_GAIN" index="124">0x000dc6a1</value>
-			<value id="280" name="SDV_USER_AMBIENT_GAIN" index="125">0x000dc6a1</value>
-			<value id="281" name="SDV_USER_AMBIENT_GAIN" index="126">0x000dc6a1</value>
-			<value id="282" name="SDV_USER_AMBIENT_GAIN" index="127">0x000dc6a1</value>
-			<value id="283" name="SDV_USER_AMBIENT_GAIN" index="128">0x000dc6a1</value>
-			<value id="284" name="SDV_USER_AMBIENT_GAIN" index="129">0x000dc6a1</value>
-			<value id="285" name="SDV_USER_AMBIENT_GAIN" index="130">0x000dc6a1</value>
-			<value id="286" name="SDV_USER_AMBIENT_GAIN" index="131">0x000dc6a1</value>
-			<value id="287" name="SDV_USER_AMBIENT_GAIN" index="132">0x000dc6a1</value>
-			<value id="288" name="SDV_USER_AMBIENT_GAIN" index="133">0x000dc6a1</value>
-			<value id="289" name="SDV_USER_AMBIENT_GAIN" index="134">0x000dc6a1</value>
-			<value id="290" name="SDV_USER_AMBIENT_GAIN" index="135">0x000dc6a1</value>
-			<value id="291" name="SDV_USER_AMBIENT_GAIN" index="136">0x000dc6a1</value>
-			<value id="292" name="SDV_USER_AMBIENT_GAIN" index="137">0x000dc6a1</value>
-			<value id="293" name="SDV_USER_AMBIENT_GAIN" index="138">0x000dc6a1</value>
-			<value id="294" name="SDV_USER_AMBIENT_GAIN" index="139">0x000dc6a1</value>
+			<value id="235" name="SDV_USER_AMBIENT_GAIN" index="80">0x00050f43</value>
+			<value id="236" name="SDV_USER_AMBIENT_GAIN" index="81">0x00050f43</value>
+			<value id="237" name="SDV_USER_AMBIENT_GAIN" index="82">0x00050f43</value>
+			<value id="238" name="SDV_USER_AMBIENT_GAIN" index="83">0x00100000</value>
+			<value id="239" name="SDV_USER_AMBIENT_GAIN" index="84">0x00100000</value>
+			<value id="240" name="SDV_USER_AMBIENT_GAIN" index="85">0x00100000</value>
+			<value id="241" name="SDV_USER_AMBIENT_GAIN" index="86">0x00100000</value>
+			<value id="242" name="SDV_USER_AMBIENT_GAIN" index="87">0x00100000</value>
+			<value id="243" name="SDV_USER_AMBIENT_GAIN" index="88">0x00100000</value>
+			<value id="244" name="SDV_USER_AMBIENT_GAIN" index="89">0x00100000</value>
+			<value id="245" name="SDV_USER_AMBIENT_GAIN" index="90">0x00100000</value>
+			<value id="246" name="SDV_USER_AMBIENT_GAIN" index="91">0x00100000</value>
+			<value id="247" name="SDV_USER_AMBIENT_GAIN" index="92">0x00100000</value>
+			<value id="248" name="SDV_USER_AMBIENT_GAIN" index="93">0x00100000</value>
+			<value id="249" name="SDV_USER_AMBIENT_GAIN" index="94">0x00100000</value>
+			<value id="250" name="SDV_USER_AMBIENT_GAIN" index="95">0x00100000</value>
+			<value id="251" name="SDV_USER_AMBIENT_GAIN" index="96">0x00100000</value>
+			<value id="252" name="SDV_USER_AMBIENT_GAIN" index="97">0x00100000</value>
+			<value id="253" name="SDV_USER_AMBIENT_GAIN" index="98">0x00100000</value>
+			<value id="254" name="SDV_USER_AMBIENT_GAIN" index="99">0x00100000</value>
+			<value id="255" name="SDV_USER_AMBIENT_GAIN" index="100">0x00050f44</value>
+			<value id="256" name="SDV_USER_AMBIENT_GAIN" index="101">0x00050f44</value>
+			<value id="257" name="SDV_USER_AMBIENT_GAIN" index="102">0x00050f44</value>
+			<value id="258" name="SDV_USER_AMBIENT_GAIN" index="103">0x00050f44</value>
+			<value id="259" name="SDV_USER_AMBIENT_GAIN" index="104">0x00050f44</value>
+			<value id="260" name="SDV_USER_AMBIENT_GAIN" index="105">0x00050f44</value>
+			<value id="261" name="SDV_USER_AMBIENT_GAIN" index="106">0x00050f44</value>
+			<value id="262" name="SDV_USER_AMBIENT_GAIN" index="107">0x00050f44</value>
+			<value id="263" name="SDV_USER_AMBIENT_GAIN" index="108">0x00100000</value>
+			<value id="264" name="SDV_USER_AMBIENT_GAIN" index="109">0x00100000</value>
+			<value id="265" name="SDV_USER_AMBIENT_GAIN" index="110">0x00100000</value>
+			<value id="266" name="SDV_USER_AMBIENT_GAIN" index="111">0x00100000</value>
+			<value id="267" name="SDV_USER_AMBIENT_GAIN" index="112">0x00100000</value>
+			<value id="268" name="SDV_USER_AMBIENT_GAIN" index="113">0x00100000</value>
+			<value id="269" name="SDV_USER_AMBIENT_GAIN" index="114">0x00100000</value>
+			<value id="270" name="SDV_USER_AMBIENT_GAIN" index="115">0x00100000</value>
+			<value id="271" name="SDV_USER_AMBIENT_GAIN" index="116">0x00100000</value>
+			<value id="272" name="SDV_USER_AMBIENT_GAIN" index="117">0x00100000</value>
+			<value id="273" name="SDV_USER_AMBIENT_GAIN" index="118">0x00100000</value>
+			<value id="274" name="SDV_USER_AMBIENT_GAIN" index="119">0x00100000</value>
+			<value id="275" name="SDV_USER_AMBIENT_GAIN" index="120">0x00050f44</value>
+			<value id="276" name="SDV_USER_AMBIENT_GAIN" index="121">0x00050f44</value>
+			<value id="277" name="SDV_USER_AMBIENT_GAIN" index="122">0x00050f44</value>
+			<value id="278" name="SDV_USER_AMBIENT_GAIN" index="123">0x00050f44</value>
+			<value id="279" name="SDV_USER_AMBIENT_GAIN" index="124">0x00050f44</value>
+			<value id="280" name="SDV_USER_AMBIENT_GAIN" index="125">0x00050f44</value>
+			<value id="281" name="SDV_USER_AMBIENT_GAIN" index="126">0x00050f44</value>
+			<value id="282" name="SDV_USER_AMBIENT_GAIN" index="127">0x00050f44</value>
+			<value id="283" name="SDV_USER_AMBIENT_GAIN" index="128">0x00050f44</value>
+			<value id="284" name="SDV_USER_AMBIENT_GAIN" index="129">0x00050f44</value>
+			<value id="285" name="SDV_USER_AMBIENT_GAIN" index="130">0x00050f44</value>
+			<value id="286" name="SDV_USER_AMBIENT_GAIN" index="131">0x00050f44</value>
+			<value id="287" name="SDV_USER_AMBIENT_GAIN" index="132">0x00050f44</value>
+			<value id="288" name="SDV_USER_AMBIENT_GAIN" index="133">0x00050f44</value>
+			<value id="289" name="SDV_USER_AMBIENT_GAIN" index="134">0x00050f44</value>
+			<value id="290" name="SDV_USER_AMBIENT_GAIN" index="135">0x00050f44</value>
+			<value id="291" name="SDV_USER_AMBIENT_GAIN" index="136">0x00100000</value>
+			<value id="292" name="SDV_USER_AMBIENT_GAIN" index="137">0x00100000</value>
+			<value id="293" name="SDV_USER_AMBIENT_GAIN" index="138">0x00100000</value>
+			<value id="294" name="SDV_USER_AMBIENT_GAIN" index="139">0x00100000</value>
 		</INIT>
 		<VAR>
-			<value id="0" name="SDV_SETTING">0x00000001</value>
+			<value id="0" name="SDV_SETTING">0x00000002</value>
 		</VAR>
 	</LGSE_FUNCTION>
 </LGSE_API>

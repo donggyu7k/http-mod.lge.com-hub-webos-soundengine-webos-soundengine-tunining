@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.0">
-	<libLGSE_Compatibility>0x00006006</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x06010002</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>014</ID>
 		<NAME>AUDIO_SCENE_CLASSIFICATION</NAME>
 		<FLAG>0x00000000</FLAG>
 		<INIT>
 			<value id="0" name="AC_SIGMOID_SATURATION">0x000a0000</value>
-			<value id="1" name="AC_ALPHA">0x000020c4</value>
-			<value id="2" name="AC_ONE_MINUS_ALPHA">0x007fdf3b</value>
+			<value id="1" name="AC_ALPHA">0x0000a3d7</value>
+			<value id="2" name="AC_ONE_MINUS_ALPHA">0x007f5c29</value>
 			<value id="3" name="AC_MODEL_INDEX" index="0">0x00000002</value>
 			<value id="4" name="AC_MODEL_INDEX" index="1">0x00000001</value>
 			<value id="5" name="AC_MODEL_INDEX" index="2">0x00000000</value>

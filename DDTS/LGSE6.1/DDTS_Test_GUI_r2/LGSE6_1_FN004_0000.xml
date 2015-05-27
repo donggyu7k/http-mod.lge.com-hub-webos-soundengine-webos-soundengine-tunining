@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.0">
-	<libLGSE_Compatibility>0x00006006</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x06010002</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>004</ID>
-		<NAME>PARAMETRICEQ</NAME>
+		<NAME>FN004SoundMode</NAME>
 		<FLAG>0x000000ff</FLAG>
 		<VAR>
 			<value id="0" name="FILTER_COEFFICIENT" index="0">0x00000000</value>
@@ -31,26 +31,26 @@
 			<value id="22" name="FILTER_COEFFICIENT" index="22">0x00200000</value>
 			<value id="23" name="FILTER_COEFFICIENT" index="23">0x00000000</value>
 			<value id="24" name="FILTER_COEFFICIENT" index="24">0x00000000</value>
-			<value id="25" name="FREQUENCY" index="25">100</value>
-			<value id="26" name="GAIN" index="26">0</value>
-			<value id="27" name="Q" index="27">10</value>
-			<value id="28" name="TYPE" index="28">7</value>
-			<value id="29" name="FREQUENCY" index="29">100</value>
-			<value id="30" name="GAIN" index="30">0</value>
-			<value id="31" name="Q" index="31">10</value>
-			<value id="32" name="TYPE" index="32">7</value>
-			<value id="33" name="FREQUENCY" index="33">100</value>
-			<value id="34" name="GAIN" index="34">0</value>
-			<value id="35" name="Q" index="35">10</value>
-			<value id="36" name="TYPE" index="36">7</value>
-			<value id="37" name="FREQUENCY" index="37">100</value>
-			<value id="38" name="GAIN" index="38">0</value>
-			<value id="39" name="Q" index="39">10</value>
-			<value id="40" name="TYPE" index="40">7</value>
-			<value id="41" name="FREQUENCY" index="41">100</value>
-			<value id="42" name="GAIN" index="42">0</value>
-			<value id="43" name="Q" index="43">10</value>
-			<value id="44" name="TYPE" index="44">7</value>
+			<value id="25" name="FREQUENCY" index="35">100</value>
+			<value id="26" name="GAIN" index="36">0</value>
+			<value id="27" name="Q" index="37">10</value>
+			<value id="28" name="TYPE" index="38">7</value>
+			<value id="29" name="FREQUENCY" index="39">100</value>
+			<value id="30" name="GAIN" index="40">0</value>
+			<value id="31" name="Q" index="41">10</value>
+			<value id="32" name="TYPE" index="42">7</value>
+			<value id="33" name="FREQUENCY" index="43">100</value>
+			<value id="34" name="GAIN" index="44">0</value>
+			<value id="35" name="Q" index="45">10</value>
+			<value id="36" name="TYPE" index="46">7</value>
+			<value id="37" name="FREQUENCY" index="47">100</value>
+			<value id="38" name="GAIN" index="48">0</value>
+			<value id="39" name="Q" index="49">10</value>
+			<value id="40" name="TYPE" index="50">7</value>
+			<value id="41" name="FREQUENCY" index="51">100</value>
+			<value id="42" name="GAIN" index="52">0</value>
+			<value id="43" name="Q" index="53">10</value>
+			<value id="44" name="TYPE" index="54">7</value>
 		</VAR>
 	</LGSE_FUNCTION>
 </LGSE_API>

@@ -68,7 +68,7 @@
 			<value id="36" name="MAXGAIN_FOR_VOLUME" index="7">0x002830af</value>
 			<value id="37" name="MAXGAIN_FOR_VOLUME" index="8">0x002830af</value>
 			<value id="38" name="MAXGAIN_FOR_VOLUME" index="9">0x002830af</value>
-			<value id="39" name="MAXGAIN_FOR_VOLUME" index="10">0x00000000</value>
+			<value id="39" name="MAXGAIN_FOR_VOLUME" index="10">0x002830af</value>
 			<value id="40" name="VERSION">0x00000001</value>
 			<value id="41" name="AGC_TARGET_DB">0xffe70000</value>
 			<value id="42" name="DRC_TARGET_DB">0xffe70000</value>

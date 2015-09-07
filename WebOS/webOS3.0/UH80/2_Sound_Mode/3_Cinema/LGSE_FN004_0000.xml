@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.0">
-	<libLGSE_Compatibility>0x00006008</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x06010006</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>004</ID>
-		<NAME>PARAMETRICEQ</NAME>
+		<NAME>FN004SoundMode</NAME>
 		<FLAG>0x000000ff</FLAG>
 		<VAR>
 			<value id="0" name="FILTER_COEFFICIENT" index="0">0x00000000</value>

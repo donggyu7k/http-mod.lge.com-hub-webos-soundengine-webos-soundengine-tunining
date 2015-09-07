@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.0">
-	<libLGSE_Compatibility>0x00006008</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x06010006</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>004</ID>
-		<NAME>PARAMETRICEQ</NAME>
+		<NAME>FN004SoundMode</NAME>
 		<FLAG>0x000000ff</FLAG>
 		<VAR>
-			<value id="0" name="FILTER_COEFFICIENT" index="0">0x00000000</value>
-			<value id="1" name="FILTER_COEFFICIENT" index="1">0x00000000</value>
-			<value id="2" name="FILTER_COEFFICIENT" index="2">0x0028491e</value>
-			<value id="3" name="FILTER_COEFFICIENT" index="3">0x00000000</value>
-			<value id="4" name="FILTER_COEFFICIENT" index="4">0x00000000</value>
+			<value id="0" name="FILTER_COEFFICIENT" index="0">0xffc2773e</value>
+			<value id="1" name="FILTER_COEFFICIENT" index="1">0x001d94e9</value>
+			<value id="2" name="FILTER_COEFFICIENT" index="2">0x00207fb2</value>
+			<value id="3" name="FILTER_COEFFICIENT" index="3">0xffc2773e</value>
+			<value id="4" name="FILTER_COEFFICIENT" index="4">0x001d1537</value>
 			<value id="5" name="FILTER_COEFFICIENT" index="5">0xffd37354</value>
 			<value id="6" name="FILTER_COEFFICIENT" index="6">0x00103854</value>
 			<value id="7" name="FILTER_COEFFICIENT" index="7">0x00234142</value>
@@ -31,10 +31,10 @@
 			<value id="22" name="FILTER_COEFFICIENT" index="22">0x002452a1</value>
 			<value id="23" name="FILTER_COEFFICIENT" index="23">0xffe7b731</value>
 			<value id="24" name="FILTER_COEFFICIENT" index="24">0xfffa497d</value>
-			<value id="25" name="FREQUENCY" index="25">20</value>
-			<value id="26" name="GAIN" index="26">20</value>
-			<value id="27" name="Q" index="27">7</value>
-			<value id="28" name="TYPE" index="28">6</value>
+			<value id="25" name="FREQUENCY" index="25">300</value>
+			<value id="26" name="GAIN" index="26">30</value>
+			<value id="27" name="Q" index="27">5</value>
+			<value id="28" name="TYPE" index="28">0</value>
 			<value id="29" name="FREQUENCY" index="29">3000</value>
 			<value id="30" name="GAIN" index="30">30</value>
 			<value id="31" name="Q" index="31">6</value>

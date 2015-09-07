@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.0">
-	<libLGSE_Compatibility>0x00006008</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x06010006</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>022</ID>
 		<NAME>SMART_SOUND_CONTROLLER</NAME>
@@ -10,7 +10,7 @@
 			<value id="1" name="ALPHA_HC_EARLY_GAIN_FIX">0x00100000</value>
 			<value id="2" name="BETA_HC_EARLY_GAIN_FIX">0x00100000</value>
 			<value id="3" name="FLAG_HC_AMBIENT_GAIN_FIX">0x00000003</value>
-			<value id="4" name="ALPHA_HC_AMBIENT_GAIN_FIX">0x001699c1</value>
+			<value id="4" name="ALPHA_HC_AMBIENT_GAIN_FIX">0x000203a7</value>
 			<value id="5" name="BETA_HC_AMBIENT_GAIN_FIX">0x00000000</value>
 		</INIT>
 		<VAR>
@@ -74,66 +74,66 @@
 			<value id="57" name="SXP_GAIN_PRI" index="57">0x0014248f</value>
 			<value id="58" name="SXP_GAIN_PRI" index="58">0x0014248f</value>
 			<value id="59" name="SXP_GAIN_PRI" index="59">0x001fec98</value>
-			<value id="60" name="SXP_GAIN_PRI" index="60">0x0014248f</value>
-			<value id="61" name="SXP_GAIN_PRI" index="61">0x0014248f</value>
-			<value id="62" name="SXP_GAIN_PRI" index="62">0x001fec98</value>
-			<value id="63" name="SXP_GAIN_PRI" index="63">0x0014248f</value>
-			<value id="64" name="SXP_GAIN_PRI" index="64">0x0014248f</value>
-			<value id="65" name="SXP_GAIN_PRI" index="65">0x001fec98</value>
-			<value id="66" name="SXP_GAIN_PRI" index="66">0x0014248f</value>
-			<value id="67" name="SXP_GAIN_PRI" index="67">0x0014248f</value>
-			<value id="68" name="SXP_GAIN_PRI" index="68">0x001fec98</value>
-			<value id="69" name="SXP_GAIN_PRI" index="69">0x0014248f</value>
-			<value id="70" name="SXP_GAIN_PRI" index="70">0x0014248f</value>
-			<value id="71" name="SXP_GAIN_PRI" index="71">0x001fec98</value>
-			<value id="72" name="SXP_GAIN_PRI" index="72">0x0014248f</value>
-			<value id="73" name="SXP_GAIN_PRI" index="73">0x0014248f</value>
-			<value id="74" name="SXP_GAIN_PRI" index="74">0x001fec98</value>
-			<value id="75" name="SXP_GAIN_PRI" index="75">0x0014248f</value>
-			<value id="76" name="SXP_GAIN_PRI" index="76">0x0014248f</value>
-			<value id="77" name="SXP_GAIN_PRI" index="77">0x001fec98</value>
-			<value id="78" name="SXP_GAIN_PRI" index="78">0x0014248f</value>
-			<value id="79" name="SXP_GAIN_PRI" index="79">0x0014248f</value>
-			<value id="80" name="SXP_GAIN_PRI" index="80">0x001fec98</value>
-			<value id="81" name="SXP_GAIN_PRI" index="81">0x0014248f</value>
-			<value id="82" name="SXP_GAIN_PRI" index="82">0x0014248f</value>
-			<value id="83" name="SXP_GAIN_PRI" index="83">0x001fec98</value>
-			<value id="84" name="SXP_GAIN_PRI" index="84">0x0014248f</value>
-			<value id="85" name="SXP_GAIN_PRI" index="85">0x0014248f</value>
-			<value id="86" name="SXP_GAIN_PRI" index="86">0x001fec98</value>
-			<value id="87" name="SXP_GAIN_PRI" index="87">0x0014248f</value>
-			<value id="88" name="SXP_GAIN_PRI" index="88">0x0014248f</value>
-			<value id="89" name="SXP_GAIN_PRI" index="89">0x001fec98</value>
-			<value id="90" name="SXP_GAIN_PRI" index="90">0x0014248f</value>
-			<value id="91" name="SXP_GAIN_PRI" index="91">0x0014248f</value>
-			<value id="92" name="SXP_GAIN_PRI" index="92">0x001fec98</value>
-			<value id="93" name="SXP_GAIN_PRI" index="93">0x0014248f</value>
-			<value id="94" name="SXP_GAIN_PRI" index="94">0x0014248f</value>
-			<value id="95" name="SXP_GAIN_PRI" index="95">0x001fec98</value>
-			<value id="96" name="SXP_GAIN_PRI" index="96">0x0014248f</value>
-			<value id="97" name="SXP_GAIN_PRI" index="97">0x0014248f</value>
-			<value id="98" name="SXP_GAIN_PRI" index="98">0x001fec98</value>
-			<value id="99" name="SXP_GAIN_PRI" index="99">0x0014248f</value>
-			<value id="100" name="SXP_GAIN_PRI" index="100">0x0014248f</value>
-			<value id="101" name="SXP_GAIN_PRI" index="101">0x001fec98</value>
-			<value id="102" name="SXP_GAIN_PRI" index="102">0x0014248f</value>
-			<value id="103" name="SXP_GAIN_PRI" index="103">0x0014248f</value>
-			<value id="104" name="SXP_GAIN_PRI" index="104">0x001fec98</value>
-			<value id="105" name="SXP_GAIN_PRI" index="105">0x0014248f</value>
-			<value id="106" name="SXP_GAIN_PRI" index="106">0x0014248f</value>
-			<value id="107" name="SXP_GAIN_PRI" index="107">0x001fec98</value>
-			<value id="108" name="SXP_GAIN_PRI" index="108">0x0014248f</value>
-			<value id="109" name="SXP_GAIN_PRI" index="109">0x0014248f</value>
-			<value id="110" name="SXP_GAIN_PRI" index="110">0x001fec98</value>
-			<value id="111" name="SXP_GAIN_PRI" index="111">0x0014248f</value>
-			<value id="112" name="SXP_GAIN_PRI" index="112">0x0014248f</value>
-			<value id="113" name="SXP_GAIN_PRI" index="113">0x001fec98</value>
-			<value id="114" name="SXP_GAIN_PRI" index="114">0x0014248f</value>
-			<value id="115" name="SXP_GAIN_PRI" index="115">0x0014248f</value>
-			<value id="116" name="SXP_GAIN_PRI" index="116">0x001fec98</value>
-			<value id="117" name="SXP_GAIN_PRI" index="117">0x0014248f</value>
-			<value id="118" name="SXP_GAIN_PRI" index="118">0x0014248f</value>
-			<value id="119" name="SXP_GAIN_PRI" index="119">0x001fec98</value>
+			<value id="60" name="SXP_GAIN_PRI" index="60">0x00100000</value>
+			<value id="61" name="SXP_GAIN_PRI" index="61">0x00100000</value>
+			<value id="62" name="SXP_GAIN_PRI" index="62">0x00100000</value>
+			<value id="63" name="SXP_GAIN_PRI" index="63">0x00100000</value>
+			<value id="64" name="SXP_GAIN_PRI" index="64">0x00100000</value>
+			<value id="65" name="SXP_GAIN_PRI" index="65">0x00100000</value>
+			<value id="66" name="SXP_GAIN_PRI" index="66">0x00100000</value>
+			<value id="67" name="SXP_GAIN_PRI" index="67">0x00100000</value>
+			<value id="68" name="SXP_GAIN_PRI" index="68">0x00100000</value>
+			<value id="69" name="SXP_GAIN_PRI" index="69">0x00100000</value>
+			<value id="70" name="SXP_GAIN_PRI" index="70">0x00100000</value>
+			<value id="71" name="SXP_GAIN_PRI" index="71">0x00100000</value>
+			<value id="72" name="SXP_GAIN_PRI" index="72">0x00100000</value>
+			<value id="73" name="SXP_GAIN_PRI" index="73">0x00100000</value>
+			<value id="74" name="SXP_GAIN_PRI" index="74">0x00100000</value>
+			<value id="75" name="SXP_GAIN_PRI" index="75">0x00100000</value>
+			<value id="76" name="SXP_GAIN_PRI" index="76">0x00100000</value>
+			<value id="77" name="SXP_GAIN_PRI" index="77">0x00100000</value>
+			<value id="78" name="SXP_GAIN_PRI" index="78">0x00100000</value>
+			<value id="79" name="SXP_GAIN_PRI" index="79">0x00100000</value>
+			<value id="80" name="SXP_GAIN_PRI" index="80">0x00100000</value>
+			<value id="81" name="SXP_GAIN_PRI" index="81">0x00100000</value>
+			<value id="82" name="SXP_GAIN_PRI" index="82">0x00100000</value>
+			<value id="83" name="SXP_GAIN_PRI" index="83">0x00100000</value>
+			<value id="84" name="SXP_GAIN_PRI" index="84">0x00100000</value>
+			<value id="85" name="SXP_GAIN_PRI" index="85">0x00100000</value>
+			<value id="86" name="SXP_GAIN_PRI" index="86">0x00100000</value>
+			<value id="87" name="SXP_GAIN_PRI" index="87">0x00100000</value>
+			<value id="88" name="SXP_GAIN_PRI" index="88">0x00100000</value>
+			<value id="89" name="SXP_GAIN_PRI" index="89">0x00100000</value>
+			<value id="90" name="SXP_GAIN_PRI" index="90">0x00100000</value>
+			<value id="91" name="SXP_GAIN_PRI" index="91">0x00100000</value>
+			<value id="92" name="SXP_GAIN_PRI" index="92">0x00100000</value>
+			<value id="93" name="SXP_GAIN_PRI" index="93">0x00100000</value>
+			<value id="94" name="SXP_GAIN_PRI" index="94">0x00100000</value>
+			<value id="95" name="SXP_GAIN_PRI" index="95">0x00100000</value>
+			<value id="96" name="SXP_GAIN_PRI" index="96">0x00100000</value>
+			<value id="97" name="SXP_GAIN_PRI" index="97">0x00100000</value>
+			<value id="98" name="SXP_GAIN_PRI" index="98">0x00100000</value>
+			<value id="99" name="SXP_GAIN_PRI" index="99">0x00100000</value>
+			<value id="100" name="SXP_GAIN_PRI" index="100">0x00100000</value>
+			<value id="101" name="SXP_GAIN_PRI" index="101">0x00100000</value>
+			<value id="102" name="SXP_GAIN_PRI" index="102">0x00100000</value>
+			<value id="103" name="SXP_GAIN_PRI" index="103">0x00100000</value>
+			<value id="104" name="SXP_GAIN_PRI" index="104">0x00100000</value>
+			<value id="105" name="SXP_GAIN_PRI" index="105">0x00100000</value>
+			<value id="106" name="SXP_GAIN_PRI" index="106">0x00100000</value>
+			<value id="107" name="SXP_GAIN_PRI" index="107">0x00100000</value>
+			<value id="108" name="SXP_GAIN_PRI" index="108">0x00100000</value>
+			<value id="109" name="SXP_GAIN_PRI" index="109">0x00100000</value>
+			<value id="110" name="SXP_GAIN_PRI" index="110">0x00100000</value>
+			<value id="111" name="SXP_GAIN_PRI" index="111">0x00100000</value>
+			<value id="112" name="SXP_GAIN_PRI" index="112">0x00100000</value>
+			<value id="113" name="SXP_GAIN_PRI" index="113">0x00100000</value>
+			<value id="114" name="SXP_GAIN_PRI" index="114">0x00100000</value>
+			<value id="115" name="SXP_GAIN_PRI" index="115">0x00100000</value>
+			<value id="116" name="SXP_GAIN_PRI" index="116">0x00100000</value>
+			<value id="117" name="SXP_GAIN_PRI" index="117">0x00100000</value>
+			<value id="118" name="SXP_GAIN_PRI" index="118">0x00100000</value>
+			<value id="119" name="SXP_GAIN_PRI" index="119">0x00100000</value>
 			<value id="120" name="SXP_GAIN_PRI" index="120">0x00100000</value>
 			<value id="121" name="SXP_GAIN_PRI" index="121">0x00100000</value>
 			<value id="122" name="SXP_GAIN_PRI" index="122">0x00100000</value>
@@ -314,64 +314,64 @@
 			<value id="297" name="SXP_GAIN_AMB" index="57">0x002d1818</value>
 			<value id="298" name="SXP_GAIN_AMB" index="58">0x001c73d5</value>
 			<value id="299" name="SXP_GAIN_AMB" index="59">0x00100000</value>
-			<value id="300" name="SXP_GAIN_AMB" index="60">0x002d1818</value>
+			<value id="300" name="SXP_GAIN_AMB" index="60">0x00100000</value>
 			<value id="301" name="SXP_GAIN_AMB" index="61">0x001c73d5</value>
 			<value id="302" name="SXP_GAIN_AMB" index="62">0x00100000</value>
-			<value id="303" name="SXP_GAIN_AMB" index="63">0x002d1818</value>
+			<value id="303" name="SXP_GAIN_AMB" index="63">0x00100000</value>
 			<value id="304" name="SXP_GAIN_AMB" index="64">0x001c73d5</value>
 			<value id="305" name="SXP_GAIN_AMB" index="65">0x00100000</value>
-			<value id="306" name="SXP_GAIN_AMB" index="66">0x002d1818</value>
+			<value id="306" name="SXP_GAIN_AMB" index="66">0x00100000</value>
 			<value id="307" name="SXP_GAIN_AMB" index="67">0x001c73d5</value>
 			<value id="308" name="SXP_GAIN_AMB" index="68">0x00100000</value>
-			<value id="309" name="SXP_GAIN_AMB" index="69">0x002d1818</value>
+			<value id="309" name="SXP_GAIN_AMB" index="69">0x00100000</value>
 			<value id="310" name="SXP_GAIN_AMB" index="70">0x001c73d5</value>
 			<value id="311" name="SXP_GAIN_AMB" index="71">0x00100000</value>
-			<value id="312" name="SXP_GAIN_AMB" index="72">0x002d1818</value>
+			<value id="312" name="SXP_GAIN_AMB" index="72">0x00100000</value>
 			<value id="313" name="SXP_GAIN_AMB" index="73">0x001c73d5</value>
 			<value id="314" name="SXP_GAIN_AMB" index="74">0x00100000</value>
-			<value id="315" name="SXP_GAIN_AMB" index="75">0x002d1818</value>
+			<value id="315" name="SXP_GAIN_AMB" index="75">0x00100000</value>
 			<value id="316" name="SXP_GAIN_AMB" index="76">0x001c73d5</value>
 			<value id="317" name="SXP_GAIN_AMB" index="77">0x00100000</value>
-			<value id="318" name="SXP_GAIN_AMB" index="78">0x002d1818</value>
+			<value id="318" name="SXP_GAIN_AMB" index="78">0x00100000</value>
 			<value id="319" name="SXP_GAIN_AMB" index="79">0x001c73d5</value>
 			<value id="320" name="SXP_GAIN_AMB" index="80">0x00100000</value>
-			<value id="321" name="SXP_GAIN_AMB" index="81">0x002d1818</value>
+			<value id="321" name="SXP_GAIN_AMB" index="81">0x00100000</value>
 			<value id="322" name="SXP_GAIN_AMB" index="82">0x001c73d5</value>
 			<value id="323" name="SXP_GAIN_AMB" index="83">0x00100000</value>
-			<value id="324" name="SXP_GAIN_AMB" index="84">0x002d1818</value>
+			<value id="324" name="SXP_GAIN_AMB" index="84">0x00100000</value>
 			<value id="325" name="SXP_GAIN_AMB" index="85">0x001c73d5</value>
 			<value id="326" name="SXP_GAIN_AMB" index="86">0x00100000</value>
-			<value id="327" name="SXP_GAIN_AMB" index="87">0x002d1818</value>
+			<value id="327" name="SXP_GAIN_AMB" index="87">0x00100000</value>
 			<value id="328" name="SXP_GAIN_AMB" index="88">0x001c73d5</value>
 			<value id="329" name="SXP_GAIN_AMB" index="89">0x00100000</value>
-			<value id="330" name="SXP_GAIN_AMB" index="90">0x002d1818</value>
+			<value id="330" name="SXP_GAIN_AMB" index="90">0x00100000</value>
 			<value id="331" name="SXP_GAIN_AMB" index="91">0x001c73d5</value>
 			<value id="332" name="SXP_GAIN_AMB" index="92">0x00100000</value>
-			<value id="333" name="SXP_GAIN_AMB" index="93">0x002d1818</value>
+			<value id="333" name="SXP_GAIN_AMB" index="93">0x00100000</value>
 			<value id="334" name="SXP_GAIN_AMB" index="94">0x001c73d5</value>
 			<value id="335" name="SXP_GAIN_AMB" index="95">0x00100000</value>
-			<value id="336" name="SXP_GAIN_AMB" index="96">0x002d1818</value>
+			<value id="336" name="SXP_GAIN_AMB" index="96">0x00100000</value>
 			<value id="337" name="SXP_GAIN_AMB" index="97">0x001c73d5</value>
 			<value id="338" name="SXP_GAIN_AMB" index="98">0x00100000</value>
-			<value id="339" name="SXP_GAIN_AMB" index="99">0x002d1818</value>
+			<value id="339" name="SXP_GAIN_AMB" index="99">0x00100000</value>
 			<value id="340" name="SXP_GAIN_AMB" index="100">0x001c73d5</value>
 			<value id="341" name="SXP_GAIN_AMB" index="101">0x00100000</value>
-			<value id="342" name="SXP_GAIN_AMB" index="102">0x002d1818</value>
+			<value id="342" name="SXP_GAIN_AMB" index="102">0x00100000</value>
 			<value id="343" name="SXP_GAIN_AMB" index="103">0x001c73d5</value>
 			<value id="344" name="SXP_GAIN_AMB" index="104">0x00100000</value>
-			<value id="345" name="SXP_GAIN_AMB" index="105">0x002d1818</value>
+			<value id="345" name="SXP_GAIN_AMB" index="105">0x00100000</value>
 			<value id="346" name="SXP_GAIN_AMB" index="106">0x001c73d5</value>
 			<value id="347" name="SXP_GAIN_AMB" index="107">0x00100000</value>
-			<value id="348" name="SXP_GAIN_AMB" index="108">0x002d1818</value>
+			<value id="348" name="SXP_GAIN_AMB" index="108">0x00100000</value>
 			<value id="349" name="SXP_GAIN_AMB" index="109">0x001c73d5</value>
 			<value id="350" name="SXP_GAIN_AMB" index="110">0x00100000</value>
-			<value id="351" name="SXP_GAIN_AMB" index="111">0x002d1818</value>
+			<value id="351" name="SXP_GAIN_AMB" index="111">0x00100000</value>
 			<value id="352" name="SXP_GAIN_AMB" index="112">0x001c73d5</value>
 			<value id="353" name="SXP_GAIN_AMB" index="113">0x00100000</value>
-			<value id="354" name="SXP_GAIN_AMB" index="114">0x002d1818</value>
+			<value id="354" name="SXP_GAIN_AMB" index="114">0x00100000</value>
 			<value id="355" name="SXP_GAIN_AMB" index="115">0x001c73d5</value>
 			<value id="356" name="SXP_GAIN_AMB" index="116">0x00100000</value>
-			<value id="357" name="SXP_GAIN_AMB" index="117">0x002d1818</value>
+			<value id="357" name="SXP_GAIN_AMB" index="117">0x00100000</value>
 			<value id="358" name="SXP_GAIN_AMB" index="118">0x001c73d5</value>
 			<value id="359" name="SXP_GAIN_AMB" index="119">0x00100000</value>
 			<value id="360" name="SXP_GAIN_AMB" index="120">0x00100000</value>

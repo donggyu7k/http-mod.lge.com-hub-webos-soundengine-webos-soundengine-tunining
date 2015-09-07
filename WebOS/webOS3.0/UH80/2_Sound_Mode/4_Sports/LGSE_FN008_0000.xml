@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.0">
-	<libLGSE_Compatibility>0x00006008</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x06010006</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>008</ID>
 		<NAME>HEIGHT_CHANNEL</NAME>
@@ -119,7 +119,7 @@
 			<value id="0" name="_DUMMY_LGSE5_HC_ROOM_MODEL_GAIN_FIX_0">0x00000000</value>
 			<value id="1" name="HC_ROOM_MODEL_GAIN_FIX">0x00100000</value>
 			<value id="2" name="_DUMMY_LGSE5_HC_AMBIENT_GAIN_FIX_0">0x00000000</value>
-			<value id="3" name="HC_AMBIENT_GAIN_FIX">0x0002d862</value>
+			<value id="3" name="HC_AMBIENT_GAIN_FIX">0x000203a7</value>
 			<value id="4" name="_DUMMY_LGSE5_HC_EARLY_REFLECTION_GAIN_FIX_0">0x00000000</value>
 			<value id="5" name="HC_EARLY_REFLECTION_GAIN_FIX">0x00100000</value>
 			<value id="6" name="HC_EARLY_REFLECTION_ENABLE">0x00000001</value>

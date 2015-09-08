@@ -1,2 +1,2 @@
 // VARIABLE
-0x00666666, 0x00599999, 
+0x007fffff, 0x007fffff, 

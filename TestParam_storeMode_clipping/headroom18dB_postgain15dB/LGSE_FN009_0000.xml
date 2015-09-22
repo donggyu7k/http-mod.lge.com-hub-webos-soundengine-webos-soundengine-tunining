@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<LGSE_API version="6.0">
+	<libLGSE_Compatibility>0x06010006</libLGSE_Compatibility>
+	<LGSE_FUNCTION>
+		<ID>009</ID>
+		<NAME>GAINCONTROLLER</NAME>
+		<FLAG>0x00000000</FLAG>
+		<INIT>
+			<value id="0" name="SMOOTHING" index="0">0x0000a3d7</value>
+			<value id="1" name="SMOOTHING" index="1">0x007f5c28</value>
+			<value id="2" name="HEADROOM">0x00101d3f</value>
+			<value id="3" name="POSTGAIN">0x0059f980</value>
+			<value id="4" name="LIMIT_TARGET">0x0008ff59</value>
+			<value id="5" name="LIMIT_MINPOW">0x00040c37</value>
+			<value id="6" name="LIMIT_ATTACK">0x000ccccc</value>
+			<value id="7" name="LIMIT_RELEASE">0x000147ae</value>
+			<value id="8" name="LIMIT_GAIN_ATTACK">0x00287a26</value>
+			<value id="9" name="LIMIT_GAIN_RELEASE">0x000ccccc</value>
+		</INIT>
+		<VAR>
+			<value id="0" name="DB_IDX">0xffffffff</value>
+			<value id="1" name="VALUE">0x000ccccc</value>
+		</VAR>
+	</LGSE_FUNCTION>
+</LGSE_API>

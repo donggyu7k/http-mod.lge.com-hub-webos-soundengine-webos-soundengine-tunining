@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.0">
-	<libLGSE_Compatibility>0x06010005</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x06010009</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>001</ID>
 		<NAME>AUTOMATIC_GAIN_CONTROL</NAME>
@@ -29,13 +29,13 @@
 			<value id="20" name="WEIGHT_GAIN_FIX" index="19">0x0032edab</value>
 		</INIT>
 		<VAR>
-			<value id="0" name="TARGET_10LOG10">0xffe70000</value>
-			<value id="1" name="TARGET">0x000732ae</value>
-			<value id="2" name="MIN_XPOW">0x000147ae</value>
+			<value id="0" name="TARGET_10LOG10">0x00000000</value>
+			<value id="1" name="TARGET">0x00000000</value>
+			<value id="2" name="MIN_XPOW">0x00020756</value>
 			<value id="3" name="NOISE_SMOOTH">0x00000000</value>
 			<value id="4" name="MINMAX_SMOOTH">0x000ccccc</value>
-			<value id="5" name="AGC_GAIN_LIMIT" index="0">0x002830af</value>
-			<value id="6" name="AGC_GAIN_LIMIT" index="1">0x000404de</value>
+			<value id="5" name="AGC_GAIN_LIMIT" index="0">0x00000000</value>
+			<value id="6" name="AGC_GAIN_LIMIT" index="1">0x00000000</value>
 			<value id="7" name="AGC_GATING1" index="0">0x00144960</value>
 			<value id="8" name="AGC_GATING1" index="1">0x000147ae</value>
 			<value id="9" name="AGC_GATING1" index="2">0x00000000</value>
@@ -44,7 +44,7 @@
 			<value id="12" name="AGC_GATING2" index="2">0x00001a07</value>
 			<value id="13" name="AGC_GATING_BOUND" index="0">0x005a9df7</value>
 			<value id="14" name="AGC_GATING_BOUND" index="1">0x0065ac8c</value>
-			<value id="15" name="DRC_GAIN_LIMIT" index="0">0x00060000</value>
+			<value id="15" name="DRC_GAIN_LIMIT" index="0">0x00030000</value>
 			<value id="16" name="DRC_GAIN_LIMIT" index="1">0x00060000</value>
 			<value id="17" name="DRC_RATIO" index="0">0x00066666</value>
 			<value id="18" name="DRC_RATIO" index="1">0x00066666</value>
@@ -58,37 +58,37 @@
 			<value id="26" name="LIMITER_GATING" index="0">0x00144960</value>
 			<value id="27" name="LIMITER_GATING" index="1">0x0012149a</value>
 			<value id="28" name="LIMITER_GATING" index="2">0x00020756</value>
-			<value id="29" name="MAXGAIN_FOR_VOLUME" index="0">0x00195bb9</value>
-			<value id="30" name="MAXGAIN_FOR_VOLUME" index="1">0x001adc61</value>
+			<value id="29" name="MAXGAIN_FOR_VOLUME" index="0">0x001699c1</value>
+			<value id="30" name="MAXGAIN_FOR_VOLUME" index="1">0x00195bb9</value>
 			<value id="31" name="MAXGAIN_FOR_VOLUME" index="2">0x001c73d5</value>
-			<value id="32" name="MAXGAIN_FOR_VOLUME" index="3">0x001e236d</value>
-			<value id="33" name="MAXGAIN_FOR_VOLUME" index="4">0x001fec98</value>
-			<value id="34" name="MAXGAIN_FOR_VOLUME" index="5">0x0023d1cd</value>
+			<value id="32" name="MAXGAIN_FOR_VOLUME" index="3">0x001fec98</value>
+			<value id="33" name="MAXGAIN_FOR_VOLUME" index="4">0x002830af</value>
+			<value id="34" name="MAXGAIN_FOR_VOLUME" index="5">0x002830af</value>
 			<value id="35" name="MAXGAIN_FOR_VOLUME" index="6">0x002830af</value>
 			<value id="36" name="MAXGAIN_FOR_VOLUME" index="7">0x002830af</value>
 			<value id="37" name="MAXGAIN_FOR_VOLUME" index="8">0x002830af</value>
 			<value id="38" name="MAXGAIN_FOR_VOLUME" index="9">0x002830af</value>
-			<value id="39" name="MAXGAIN_FOR_VOLUME" index="10">0x002830af</value>
-			<value id="40" name="VERSION">0x00000001</value>
-			<value id="41" name="AGC_TARGET_DB">0xffe70000</value>
-			<value id="42" name="DRC_TARGET_DB">0xffe70000</value>
-			<value id="43" name="AGC_GAIN_LIMIT_DB" index="0">0x00080000</value>
+			<value id="39" name="MAXGAIN_FOR_VOLUME" index="10">0x00000000</value>
+			<value id="40" name="VERSION">0x00111111</value>
+			<value id="41" name="AGC_TARGET_DB">0xffea0000</value>
+			<value id="42" name="DRC_TARGET_DB">0xffea0000</value>
+			<value id="43" name="AGC_GAIN_LIMIT_DB" index="0">0x00050000</value>
 			<value id="44" name="AGC_GAIN_LIMIT_DB" index="1">0x000c0000</value>
-			<value id="45" name="AGC_RATIO" index="0">0x00166666</value>
-			<value id="46" name="AGC_RATIO" index="1">0x001ccccc</value>
+			<value id="45" name="AGC_RATIO" index="0">0x00200000</value>
+			<value id="46" name="AGC_RATIO" index="1">0x00200000</value>
 			<value id="47" name="MAXGAIN_GATING" index="0">0x000246b4</value>
 			<value id="48" name="MAXGAIN_GATING" index="1">0x00020756</value>
-			<value id="49" name="MAXGAIN_GATING" index="2">0x00028dce</value>
-			<value id="50" name="MAXGAIN_FOR_ENERGY" index="0">0x002830af</value>
-			<value id="51" name="MAXGAIN_FOR_ENERGY" index="1">0x002830af</value>
-			<value id="52" name="MAXGAIN_FOR_ENERGY" index="2">0x002830af</value>
-			<value id="53" name="MAXGAIN_FOR_ENERGY" index="3">0x0023d1cd</value>
-			<value id="54" name="MAXGAIN_FOR_ENERGY" index="4">0x001fec98</value>
-			<value id="55" name="MAXGAIN_FOR_ENERGY" index="5">0x001c73d5</value>
-			<value id="56" name="MAXGAIN_FOR_ENERGY" index="6">0x00195bb9</value>
-			<value id="57" name="MAXGAIN_FOR_ENERGY" index="7">0x00195bb9</value>
-			<value id="58" name="MAXGAIN_FOR_ENERGY" index="8">0x00195bb9</value>
-			<value id="59" name="MAXGAIN_FOR_ENERGY" index="9">0x00195bb9</value>
+			<value id="49" name="MAXGAIN_GATING" index="2">0x000ccccc</value>
+			<value id="50" name="MAXGAIN_FOR_ENERGY" index="0">0x00100000</value>
+			<value id="51" name="MAXGAIN_FOR_ENERGY" index="1">0x00100000</value>
+			<value id="52" name="MAXGAIN_FOR_ENERGY" index="2">0x00100000</value>
+			<value id="53" name="MAXGAIN_FOR_ENERGY" index="3">0x00100000</value>
+			<value id="54" name="MAXGAIN_FOR_ENERGY" index="4">0x00100000</value>
+			<value id="55" name="MAXGAIN_FOR_ENERGY" index="5">0x00100000</value>
+			<value id="56" name="MAXGAIN_FOR_ENERGY" index="6">0x00100000</value>
+			<value id="57" name="MAXGAIN_FOR_ENERGY" index="7">0x00100000</value>
+			<value id="58" name="MAXGAIN_FOR_ENERGY" index="8">0x00100000</value>
+			<value id="59" name="MAXGAIN_FOR_ENERGY" index="9">0x00100000</value>
 			<value id="60" name="NOUSE" index="0">0x00000000</value>
 			<value id="61" name="NOUSE" index="1">0x00000000</value>
 			<value id="62" name="NOUSE" index="2">0x00000000</value>

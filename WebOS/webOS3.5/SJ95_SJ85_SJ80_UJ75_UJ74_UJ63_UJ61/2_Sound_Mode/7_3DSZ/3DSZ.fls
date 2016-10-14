@@ -1,0 +1,6 @@
+PWD /Users/Kichul_Office/Documents/LGSE_SRC/LGSE_QA_TUNNING/WebOS/webOS4.0/SJ95_SJ85_SJ80_UJ75_UJ74_UJ63_UJ61/2_Sound_Mode/7_3DSZ
+INPUT /usr/local/texlive/2014/texmf.cnf
+INPUT /usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT 3DSZ.tex
+OUTPUT 3DSZ.log

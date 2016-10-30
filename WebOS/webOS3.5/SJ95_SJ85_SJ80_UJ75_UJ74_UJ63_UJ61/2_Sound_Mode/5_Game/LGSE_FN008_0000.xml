@@ -121,7 +121,7 @@
 			<value id="2" name="_DUMMY_LGSE5_HC_AMBIENT_GAIN_FIX_0">0x00000000</value>
 			<value id="3" name="HC_AMBIENT_GAIN_FIX">0x0007259d</value>
 			<value id="4" name="_DUMMY_LGSE5_HC_EARLY_REFLECTION_GAIN_FIX_0">0x00000000</value>
-			<value id="5" name="HC_EARLY_REFLECTION_GAIN_FIX">0x0005ad50</value>
+			<value id="5" name="HC_EARLY_REFLECTION_GAIN_FIX">0x0005ad4f</value>
 			<value id="6" name="HC_EARLY_REFLECTION_ENABLE">0x00000001</value>
 			<value id="7" name="HC_AMBIENT_3D_ENABLE">0x00000001</value>
 			<value id="8" name="HC_LOWCUT_ENABLE">0x00000000</value>

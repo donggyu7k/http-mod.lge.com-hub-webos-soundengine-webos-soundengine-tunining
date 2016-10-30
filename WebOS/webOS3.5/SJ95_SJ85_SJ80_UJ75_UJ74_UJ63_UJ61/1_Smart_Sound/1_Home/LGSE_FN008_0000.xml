@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.0">
-	<libLGSE_Compatibility>0x0601000b</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x06020002</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>008</ID>
 		<NAME>HEIGHT_CHANNEL</NAME>
 		<FLAG>0x00000000</FLAG>
 		<INIT>
-			<value id="0" name="HC_ENH_AMB_DELAY">0x00000004</value>
+			<value id="0" name="HC_ENH_AMB_DELAY">0x00000003</value>
 			<value id="1" name="HC_NMINBUF">0x00000026</value>
 			<value id="2" name="HC_NMINSTAT">0x00000026</value>
 			<value id="3" name="HC_NAMBSPEC">0x00000026</value>
@@ -96,21 +96,21 @@
 			<value id="87" name="HC_ER_FILTER_FIX" index="17">0x007fb261</value>
 			<value id="88" name="HC_ER_FILTER_FIX" index="18">0x007fb261</value>
 			<value id="89" name="HC_ER_FILTER_FIX" index="19">0x007fb261</value>
-			<value id="90" name="HC_EL_SH_A" index="0">0xffea22a9</value>
-			<value id="91" name="HC_EL_SH_A" index="1">0x00082bc4</value>
-			<value id="92" name="HC_EL_SH_B" index="0">0x0014c8c6</value>
-			<value id="93" name="HC_EL_SH_B" index="1">0xfff99b83</value>
-			<value id="94" name="HC_EL_SH_B" index="2">0x0003ea24</value>
-			<value id="95" name="HC_EL_PK_A" index="0">0xffc3bbee</value>
-			<value id="96" name="HC_EL_PK_A" index="1">0x001d0462</value>
-			<value id="97" name="HC_EL_PK_B" index="0">0x0021d8f4</value>
-			<value id="98" name="HC_EL_PK_B" index="1">0xffc3bbee</value>
-			<value id="99" name="HC_EL_PK_B" index="2">0x001b2b6e</value>
-			<value id="100" name="HC_EL_PK2_A" index="0">0xffe32030</value>
-			<value id="101" name="HC_EL_PK2_A" index="1">0x0019bfa0</value>
-			<value id="102" name="HC_EL_PK2_B" index="0">0x0021d406</value>
-			<value id="103" name="HC_EL_PK2_B" index="1">0xffe32030</value>
-			<value id="104" name="HC_EL_PK2_B" index="2">0x0017eb9a</value>
+			<value id="90" name="HC_EL_SH_A" index="0">0xffc5641e</value>
+			<value id="91" name="HC_EL_SH_A" index="1">0x001b56e8</value>
+			<value id="92" name="HC_EL_SH_B" index="0">0x00209a76</value>
+			<value id="93" name="HC_EL_SH_B" index="1">0xffc5641e</value>
+			<value id="94" name="HC_EL_SH_B" index="2">0x001abc72</value>
+			<value id="95" name="HC_EL_PK_A" index="0">0xffe3b436</value>
+			<value id="96" name="HC_EL_PK_A" index="1">0x00189794</value>
+			<value id="97" name="HC_EL_PK_B" index="0">0x00222a9a</value>
+			<value id="98" name="HC_EL_PK_B" index="1">0xffe3b436</value>
+			<value id="99" name="HC_EL_PK_B" index="2">0x00166cfa</value>
+			<value id="100" name="HC_EL_PK2_A" index="0">0xffe33461</value>
+			<value id="101" name="HC_EL_PK2_A" index="1">0x0014e794</value>
+			<value id="102" name="HC_EL_PK2_B" index="0">0x00143107</value>
+			<value id="103" name="HC_EL_PK2_B" index="1">0xfff794c4</value>
+			<value id="104" name="HC_EL_PK2_B" index="2">0x000c562a</value>
 			<value id="105" name="HC_APGAIN">0x004ccccc</value>
 			<value id="106" name="HC_HEADROOM">0x0032f52c</value>
 			<value id="107" name="HC_POSTGAIN">0x002830af</value>
@@ -119,14 +119,14 @@
 			<value id="0" name="_DUMMY_LGSE5_HC_ROOM_MODEL_GAIN_FIX_0">0x00000000</value>
 			<value id="1" name="HC_ROOM_MODEL_GAIN_FIX">0x00100000</value>
 			<value id="2" name="_DUMMY_LGSE5_HC_AMBIENT_GAIN_FIX_0">0x00000000</value>
-			<value id="3" name="HC_AMBIENT_GAIN_FIX">0x000058c3</value>
+			<value id="3" name="HC_AMBIENT_GAIN_FIX">0x0007259d</value>
 			<value id="4" name="_DUMMY_LGSE5_HC_EARLY_REFLECTION_GAIN_FIX_0">0x00000000</value>
-			<value id="5" name="HC_EARLY_REFLECTION_GAIN_FIX">0x0011f325</value>
+			<value id="5" name="HC_EARLY_REFLECTION_GAIN_FIX">0x0005ad4f</value>
 			<value id="6" name="HC_EARLY_REFLECTION_ENABLE">0x00000001</value>
 			<value id="7" name="HC_AMBIENT_3D_ENABLE">0x00000001</value>
 			<value id="8" name="HC_LOWCUT_ENABLE">0x00000000</value>
 			<value id="9" name="HC_ROOM_MODEL_ENABLE">0x00000001</value>
-			<value id="10" name="HC_BLAUERT_ENABLE">0x00000001</value>
+			<value id="10" name="HC_BLAUERT_ENABLE">0x00000002</value>
 		</VAR>
 	</LGSE_FUNCTION>
 </LGSE_API>

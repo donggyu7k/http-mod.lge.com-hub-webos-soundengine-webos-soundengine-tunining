@@ -7,46 +7,46 @@
 		<FLAG>0x00000000</FLAG>
 		<INIT />
 		<VAR>
-			<value id="0" name="UPMIX_WEIGHT_PRI" index="0">0x000f1adf</value>
-			<value id="1" name="UPMIX_WEIGHT_PRI" index="1">0x000f1adf</value>
-			<value id="2" name="UPMIX_WEIGHT_PRI" index="2">0x000cb591</value>
-			<value id="3" name="UPMIX_WEIGHT_PRI" index="3">0x000a1866</value>
+			<value id="0" name="UPMIX_WEIGHT_PRI" index="0">0x000ab189</value>
+			<value id="1" name="UPMIX_WEIGHT_PRI" index="1">0x000ab189</value>
+			<value id="2" name="UPMIX_WEIGHT_PRI" index="2">0x000987d5</value>
+			<value id="3" name="UPMIX_WEIGHT_PRI" index="3">0x00087e80</value>
 			<value id="4" name="UPMIX_WEIGHT_PRI" index="4">0x000987d5</value>
-			<value id="5" name="UPMIX_WEIGHT_PRI" index="5">0x0008caeb</value>
-			<value id="6" name="UPMIX_WEIGHT_PRI" index="6">0x00079207</value>
-			<value id="7" name="UPMIX_WEIGHT_PRI" index="7">0x0007503b</value>
-			<value id="8" name="UPMIX_WEIGHT_PRI" index="8">0x00079207</value>
-			<value id="9" name="UPMIX_WEIGHT_PRI" index="9">0x00079207</value>
-			<value id="10" name="UPMIX_WEIGHT_PRI" index="10">0x00079207</value>
-			<value id="11" name="UPMIX_WEIGHT_PRI" index="11">0x00087e80</value>
-			<value id="12" name="UPMIX_WEIGHT_PRI" index="12">0x0008ff59</value>
-			<value id="13" name="UPMIX_WEIGHT_PRI" index="13">0x0008ff59</value>
-			<value id="14" name="UPMIX_WEIGHT_PRI" index="14">0x000987d5</value>
+			<value id="5" name="UPMIX_WEIGHT_PRI" index="5">0x0007259d</value>
+			<value id="6" name="UPMIX_WEIGHT_PRI" index="6">0x00087e80</value>
+			<value id="7" name="UPMIX_WEIGHT_PRI" index="7">0x00087e80</value>
+			<value id="8" name="UPMIX_WEIGHT_PRI" index="8">0x000ab189</value>
+			<value id="9" name="UPMIX_WEIGHT_PRI" index="9">0x000ab189</value>
+			<value id="10" name="UPMIX_WEIGHT_PRI" index="10">0x000bff91</value>
+			<value id="11" name="UPMIX_WEIGHT_PRI" index="11">0x000bff91</value>
+			<value id="12" name="UPMIX_WEIGHT_PRI" index="12">0x000a1866</value>
+			<value id="13" name="UPMIX_WEIGHT_PRI" index="13">0x000a1866</value>
+			<value id="14" name="UPMIX_WEIGHT_PRI" index="14">0x0007259d</value>
 			<value id="15" name="UPMIX_WEIGHT_PRI" index="15">0x000987d5</value>
-			<value id="16" name="UPMIX_WEIGHT_PRI" index="16">0x000bff91</value>
-			<value id="17" name="UPMIX_WEIGHT_PRI" index="17">0x000ab189</value>
-			<value id="18" name="UPMIX_WEIGHT_PRI" index="18">0x000ab189</value>
-			<value id="19" name="UPMIX_WEIGHT_PRI" index="19">0x000ab189</value>
-			<value id="20" name="UPMIX_WEIGHT_PRI" index="20">0x00050f44</value>
-			<value id="21" name="UPMIX_WEIGHT_PRI" index="21">0x00050f44</value>
-			<value id="22" name="UPMIX_WEIGHT_PRI" index="22">0x00050f44</value>
-			<value id="23" name="UPMIX_WEIGHT_PRI" index="23">0x00050f44</value>
-			<value id="24" name="UPMIX_WEIGHT_PRI" index="24">0x00050f44</value>
+			<value id="16" name="UPMIX_WEIGHT_PRI" index="16">0x0013041a</value>
+			<value id="17" name="UPMIX_WEIGHT_PRI" index="17">0x0013041a</value>
+			<value id="18" name="UPMIX_WEIGHT_PRI" index="18">0x0013041a</value>
+			<value id="19" name="UPMIX_WEIGHT_PRI" index="19">0x0013041a</value>
+			<value id="20" name="UPMIX_WEIGHT_PRI" index="20">0x00033142</value>
+			<value id="21" name="UPMIX_WEIGHT_PRI" index="21">0x000404de</value>
+			<value id="22" name="UPMIX_WEIGHT_PRI" index="22">0x0003038a</value>
+			<value id="23" name="UPMIX_WEIGHT_PRI" index="23">0x0003cb50</value>
+			<value id="24" name="UPMIX_WEIGHT_PRI" index="24">0x000404de</value>
 			<value id="25" name="UPMIX_WEIGHT_PRI" index="25">0x00050f44</value>
-			<value id="26" name="UPMIX_WEIGHT_PRI" index="26">0x00050f44</value>
-			<value id="27" name="UPMIX_WEIGHT_PRI" index="27">0x00050f44</value>
-			<value id="28" name="UPMIX_WEIGHT_PRI" index="28">0x00050f44</value>
+			<value id="26" name="UPMIX_WEIGHT_PRI" index="26">0x0003cb50</value>
+			<value id="27" name="UPMIX_WEIGHT_PRI" index="27">0x0003cb50</value>
+			<value id="28" name="UPMIX_WEIGHT_PRI" index="28">0x000441d5</value>
 			<value id="29" name="UPMIX_WEIGHT_PRI" index="29">0x00050f44</value>
 			<value id="30" name="UPMIX_WEIGHT_PRI" index="30">0x00050f44</value>
-			<value id="31" name="UPMIX_WEIGHT_PRI" index="31">0x0005ad50</value>
-			<value id="32" name="UPMIX_WEIGHT_PRI" index="32">0x0005ad50</value>
-			<value id="33" name="UPMIX_WEIGHT_PRI" index="33">0x0005ad50</value>
-			<value id="34" name="UPMIX_WEIGHT_PRI" index="34">0x00065ea5</value>
-			<value id="35" name="UPMIX_WEIGHT_PRI" index="35">0x00065ea5</value>
-			<value id="36" name="UPMIX_WEIGHT_PRI" index="36">0x00065ea5</value>
-			<value id="37" name="UPMIX_WEIGHT_PRI" index="37">0x0007259d</value>
-			<value id="38" name="UPMIX_WEIGHT_PRI" index="38">0x0007259d</value>
-			<value id="39" name="UPMIX_WEIGHT_PRI" index="39">0x0007259d</value>
+			<value id="31" name="UPMIX_WEIGHT_PRI" index="31">0x00050f44</value>
+			<value id="32" name="UPMIX_WEIGHT_PRI" index="32">0x000804dc</value>
+			<value id="33" name="UPMIX_WEIGHT_PRI" index="33">0x00087e80</value>
+			<value id="34" name="UPMIX_WEIGHT_PRI" index="34">0x000804dc</value>
+			<value id="35" name="UPMIX_WEIGHT_PRI" index="35">0x000804dc</value>
+			<value id="36" name="UPMIX_WEIGHT_PRI" index="36">0x0015561a</value>
+			<value id="37" name="UPMIX_WEIGHT_PRI" index="37">0x000bff91</value>
+			<value id="38" name="UPMIX_WEIGHT_PRI" index="38">0x000bff91</value>
+			<value id="39" name="UPMIX_WEIGHT_PRI" index="39">0x000b53be</value>
 			<value id="40" name="UPMIX_WEIGHT_PRI" index="40">0x00100000</value>
 			<value id="41" name="UPMIX_WEIGHT_PRI" index="41">0x00100000</value>
 			<value id="42" name="UPMIX_WEIGHT_PRI" index="42">0x00100000</value>
@@ -87,46 +87,46 @@
 			<value id="77" name="UPMIX_WEIGHT_PRI" index="77">0x00100000</value>
 			<value id="78" name="UPMIX_WEIGHT_PRI" index="78">0x00100000</value>
 			<value id="79" name="UPMIX_WEIGHT_PRI" index="79">0x00100000</value>
-			<value id="80" name="UPMIX_WEIGHT_AMB" index="0">0x0014248f</value>
-			<value id="81" name="UPMIX_WEIGHT_AMB" index="1">0x0014248f</value>
-			<value id="82" name="UPMIX_WEIGHT_AMB" index="2">0x0014248f</value>
-			<value id="83" name="UPMIX_WEIGHT_AMB" index="3">0x0014248f</value>
-			<value id="84" name="UPMIX_WEIGHT_AMB" index="4">0x0014248f</value>
-			<value id="85" name="UPMIX_WEIGHT_AMB" index="5">0x0011f3c9</value>
-			<value id="86" name="UPMIX_WEIGHT_AMB" index="6">0x0011f3c9</value>
-			<value id="87" name="UPMIX_WEIGHT_AMB" index="7">0x0014248f</value>
-			<value id="88" name="UPMIX_WEIGHT_AMB" index="8">0x0014248f</value>
-			<value id="89" name="UPMIX_WEIGHT_AMB" index="9">0x0014248f</value>
+			<value id="80" name="UPMIX_WEIGHT_AMB" index="0">0x001fec98</value>
+			<value id="81" name="UPMIX_WEIGHT_AMB" index="1">0x001fec98</value>
+			<value id="82" name="UPMIX_WEIGHT_AMB" index="2">0x001fec98</value>
+			<value id="83" name="UPMIX_WEIGHT_AMB" index="3">0x001fec98</value>
+			<value id="84" name="UPMIX_WEIGHT_AMB" index="4">0x001fec98</value>
+			<value id="85" name="UPMIX_WEIGHT_AMB" index="5">0x001fec98</value>
+			<value id="86" name="UPMIX_WEIGHT_AMB" index="6">0x001fec98</value>
+			<value id="87" name="UPMIX_WEIGHT_AMB" index="7">0x001c73d5</value>
+			<value id="88" name="UPMIX_WEIGHT_AMB" index="8">0x00195bb9</value>
+			<value id="89" name="UPMIX_WEIGHT_AMB" index="9">0x00195bb9</value>
 			<value id="90" name="UPMIX_WEIGHT_AMB" index="10">0x0011f3c9</value>
-			<value id="91" name="UPMIX_WEIGHT_AMB" index="11">0x0011f3c9</value>
-			<value id="92" name="UPMIX_WEIGHT_AMB" index="12">0x00100000</value>
-			<value id="93" name="UPMIX_WEIGHT_AMB" index="13">0x00100000</value>
-			<value id="94" name="UPMIX_WEIGHT_AMB" index="14">0x000e4290</value>
-			<value id="95" name="UPMIX_WEIGHT_AMB" index="15">0x000e4290</value>
-			<value id="96" name="UPMIX_WEIGHT_AMB" index="16">0x00100000</value>
-			<value id="97" name="UPMIX_WEIGHT_AMB" index="17">0x0011f3c9</value>
-			<value id="98" name="UPMIX_WEIGHT_AMB" index="18">0x0011f3c9</value>
-			<value id="99" name="UPMIX_WEIGHT_AMB" index="19">0x0011f3c9</value>
-			<value id="100" name="UPMIX_WEIGHT_AMB" index="20">0x001699c1</value>
-			<value id="101" name="UPMIX_WEIGHT_AMB" index="21">0x001699c1</value>
-			<value id="102" name="UPMIX_WEIGHT_AMB" index="22">0x001699c1</value>
-			<value id="103" name="UPMIX_WEIGHT_AMB" index="23">0x001699c1</value>
-			<value id="104" name="UPMIX_WEIGHT_AMB" index="24">0x001699c1</value>
-			<value id="105" name="UPMIX_WEIGHT_AMB" index="25">0x001699c1</value>
-			<value id="106" name="UPMIX_WEIGHT_AMB" index="26">0x0014248f</value>
-			<value id="107" name="UPMIX_WEIGHT_AMB" index="27">0x0014248f</value>
-			<value id="108" name="UPMIX_WEIGHT_AMB" index="28">0x0011f3c9</value>
-			<value id="109" name="UPMIX_WEIGHT_AMB" index="29">0x0011f3c9</value>
+			<value id="91" name="UPMIX_WEIGHT_AMB" index="11">0x000a1866</value>
+			<value id="92" name="UPMIX_WEIGHT_AMB" index="12">0x000a1866</value>
+			<value id="93" name="UPMIX_WEIGHT_AMB" index="13">0x000cb591</value>
+			<value id="94" name="UPMIX_WEIGHT_AMB" index="14">0x000b53be</value>
+			<value id="95" name="UPMIX_WEIGHT_AMB" index="15">0x000cb591</value>
+			<value id="96" name="UPMIX_WEIGHT_AMB" index="16">0x000cb591</value>
+			<value id="97" name="UPMIX_WEIGHT_AMB" index="17">0x0014248f</value>
+			<value id="98" name="UPMIX_WEIGHT_AMB" index="18">0x001699c1</value>
+			<value id="99" name="UPMIX_WEIGHT_AMB" index="19">0x00195bb9</value>
+			<value id="100" name="UPMIX_WEIGHT_AMB" index="20">0x001c73d5</value>
+			<value id="101" name="UPMIX_WEIGHT_AMB" index="21">0x001c73d5</value>
+			<value id="102" name="UPMIX_WEIGHT_AMB" index="22">0x001c73d5</value>
+			<value id="103" name="UPMIX_WEIGHT_AMB" index="23">0x001c73d5</value>
+			<value id="104" name="UPMIX_WEIGHT_AMB" index="24">0x001c73d5</value>
+			<value id="105" name="UPMIX_WEIGHT_AMB" index="25">0x001c73d5</value>
+			<value id="106" name="UPMIX_WEIGHT_AMB" index="26">0x00195bb9</value>
+			<value id="107" name="UPMIX_WEIGHT_AMB" index="27">0x00195bb9</value>
+			<value id="108" name="UPMIX_WEIGHT_AMB" index="28">0x001699c1</value>
+			<value id="109" name="UPMIX_WEIGHT_AMB" index="29">0x001699c1</value>
 			<value id="110" name="UPMIX_WEIGHT_AMB" index="30">0x0011f3c9</value>
 			<value id="111" name="UPMIX_WEIGHT_AMB" index="31">0x0014248f</value>
 			<value id="112" name="UPMIX_WEIGHT_AMB" index="32">0x00195bb9</value>
-			<value id="113" name="UPMIX_WEIGHT_AMB" index="33">0x00195bb9</value>
+			<value id="113" name="UPMIX_WEIGHT_AMB" index="33">0x001fec98</value>
 			<value id="114" name="UPMIX_WEIGHT_AMB" index="34">0x001c73d5</value>
 			<value id="115" name="UPMIX_WEIGHT_AMB" index="35">0x001c73d5</value>
 			<value id="116" name="UPMIX_WEIGHT_AMB" index="36">0x001c73d5</value>
-			<value id="117" name="UPMIX_WEIGHT_AMB" index="37">0x0023d1cd</value>
-			<value id="118" name="UPMIX_WEIGHT_AMB" index="38">0x001fec98</value>
-			<value id="119" name="UPMIX_WEIGHT_AMB" index="39">0x001fec98</value>
+			<value id="117" name="UPMIX_WEIGHT_AMB" index="37">0x001fec98</value>
+			<value id="118" name="UPMIX_WEIGHT_AMB" index="38">0x0023d1cd</value>
+			<value id="119" name="UPMIX_WEIGHT_AMB" index="39">0x002830af</value>
 			<value id="120" name="UPMIX_WEIGHT_AMB" index="40">0x00100000</value>
 			<value id="121" name="UPMIX_WEIGHT_AMB" index="41">0x00100000</value>
 			<value id="122" name="UPMIX_WEIGHT_AMB" index="42">0x00100000</value>

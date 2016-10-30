@@ -1,9 +1,9 @@
 #!/usr/bin/tclsh
 
 # api 파라메터가 저장된 경로
-set api_param_path "./"
+set api_param_path "./TestParam_storeMode_clipping"
 # 출력 파일이 저장될 경로
-set output_path "./out"
+set output_path "./TestParam_storeMode_clipping"
 ######################################################################
 #Recursive glob function
 #procedure from http://paste.tclers.tk/1346

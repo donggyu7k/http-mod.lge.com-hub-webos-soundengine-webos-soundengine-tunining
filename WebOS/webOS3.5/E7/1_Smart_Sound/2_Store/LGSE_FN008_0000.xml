@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<LGSE_API version="6.0">
+	<libLGSE_Compatibility>0x06010006</libLGSE_Compatibility>
+	<LGSE_FUNCTION>
+		<ID>008</ID>
+		<NAME>HEIGHT_CHANNEL</NAME>
+		<FLAG>0x00000000</FLAG>
+		<INIT>
+			<value id="0" name="HC_ENH_AMB_DELAY">0x00000004</value>
+			<value id="1" name="HC_NMINBUF">0x00000026</value>
+			<value id="2" name="HC_NMINSTAT">0x00000026</value>
+			<value id="3" name="HC_NAMBSPEC">0x00000026</value>
+			<value id="4" name="HC_ALPHA_MINATT_FIX">0x0001b4e8</value>
+			<value id="5" name="HC_ONE_MINUS_ALPHA_MINATT_FIX">0x007e4b18</value>
+			<value id="6" name="HC_ALPHA_MINREL_FIX">0x00444444</value>
+			<value id="7" name="HC_ONE_MINUS_ALPHA_MINREL_FIX">0x003bbbbc</value>
+			<value id="8" name="HC_MINSTAT_ATTLIMIT_FIX">0x000ccccc</value>
+			<value id="9" name="HC_RVB_ATTLIMIT_FIX">0x000809bc</value>
+			<value id="10" name="HC_RVB_OVEREST_FIX">0x00000002</value>
+			<value id="11" name="HC_INV_RVB_MAXFLUCT_FIX">0x00355555</value>
+			<value id="12" name="HC_ALPHA_RVB_ATT_FIX">0x00444444</value>
+			<value id="13" name="HC_ONE_MINUS_ALPHA_RVB_ATT_FIX">0x003bbbbc</value>
+			<value id="14" name="HC_ALPHA_RVB_REL_FIX">0x00444444</value>
+			<value id="15" name="HC_ONE_MINUS_ALPHA_RVB_REL_FIX">0x007f258c</value>
+			<value id="16" name="HC_ENH_AMB_FILTER_FIX" index="0">0x00400000</value>
+			<value id="17" name="HC_ENH_AMB_FILTER_FIX" index="1">0x00400000</value>
+			<value id="18" name="HC_ENH_AMB_FILTER_FIX" index="2">0x00400000</value>
+			<value id="19" name="HC_ENH_AMB_FILTER_FIX" index="3">0x00400000</value>
+			<value id="20" name="HC_ENH_AMB_FILTER_FIX" index="4">0x00400000</value>
+			<value id="21" name="HC_ENH_AMB_FILTER_FIX" index="5">0x00400000</value>
+			<value id="22" name="HC_ENH_AMB_FILTER_FIX" index="6">0x00400000</value>
+			<value id="23" name="HC_ENH_AMB_FILTER_FIX" index="7">0x00400000</value>
+			<value id="24" name="HC_ENH_AMB_FILTER_FIX" index="8">0x003fc4a7</value>
+			<value id="25" name="HC_ENH_AMB_FILTER_FIX" index="9">0x0038ed0e</value>
+			<value id="26" name="HC_ENH_AMB_FILTER_FIX" index="10">0x00331fe9</value>
+			<value id="27" name="HC_ENH_AMB_FILTER_FIX" index="11">0x002dad46</value>
+			<value id="28" name="HC_ENH_AMB_FILTER_FIX" index="12">0x0028ad79</value>
+			<value id="29" name="HC_ENH_AMB_FILTER_FIX" index="13">0x00247738</value>
+			<value id="30" name="HC_ENH_AMB_FILTER_FIX" index="14">0x0020ba34</value>
+			<value id="31" name="HC_ENH_AMB_FILTER_FIX" index="15">0x001d5ad8</value>
+			<value id="32" name="HC_ENH_AMB_FILTER_FIX" index="16">0x001a5139</value>
+			<value id="33" name="HC_ENH_AMB_FILTER_FIX" index="17">0x001790fe</value>
+			<value id="34" name="HC_ENH_AMB_FILTER_FIX" index="18">0x00152579</value>
+			<value id="35" name="HC_ENH_AMB_FILTER_FIX" index="19">0x0013491a</value>
+			<value id="36" name="HC_FB_GAIN_FIX" index="0">0x000ef3ce</value>
+			<value id="37" name="HC_FB_GAIN_FIX" index="1">0x0013ecca</value>
+			<value id="38" name="HC_FB_GAIN_FIX" index="2">0x001917d3</value>
+			<value id="39" name="HC_FB_GAIN_FIX" index="3">0x001e337a</value>
+			<value id="40" name="HC_NDELAY_BUF" index="0">0x00000fd0</value>
+			<value id="41" name="HC_NDELAY_BUF" index="1">0x00000cb2</value>
+			<value id="42" name="HC_NDELAY_BUF" index="2">0x00000a31</value>
+			<value id="43" name="HC_NDELAY_BUF" index="3">0x0000082e</value>
+			<value id="44" name="HC_NDELAY_BUF" index="4">0x000010d0</value>
+			<value id="45" name="HC_REVERB_FILTER_FIX" index="0">0x00400000</value>
+			<value id="46" name="HC_REVERB_FILTER_FIX" index="1">0x00400000</value>
+			<value id="47" name="HC_REVERB_FILTER_FIX" index="2">0x00400000</value>
+			<value id="48" name="HC_REVERB_FILTER_FIX" index="3">0x00400000</value>
+			<value id="49" name="HC_REVERB_FILTER_FIX" index="4">0x00400000</value>
+			<value id="50" name="HC_REVERB_FILTER_FIX" index="5">0x00400000</value>
+			<value id="51" name="HC_REVERB_FILTER_FIX" index="6">0x00400000</value>
+			<value id="52" name="HC_REVERB_FILTER_FIX" index="7">0x00400000</value>
+			<value id="53" name="HC_REVERB_FILTER_FIX" index="8">0x003f8986</value>
+			<value id="54" name="HC_REVERB_FILTER_FIX" index="9">0x0032a246</value>
+			<value id="55" name="HC_REVERB_FILTER_FIX" index="10">0x0028d6ec</value>
+			<value id="56" name="HC_REVERB_FILTER_FIX" index="11">0x0020997f</value>
+			<value id="57" name="HC_REVERB_FILTER_FIX" index="12">0x0019daae</value>
+			<value id="58" name="HC_REVERB_FILTER_FIX" index="13">0x0014c6fd</value>
+			<value id="59" name="HC_REVERB_FILTER_FIX" index="14">0x0010bc52</value>
+			<value id="60" name="HC_REVERB_FILTER_FIX" index="15">0x000d76d4</value>
+			<value id="61" name="HC_REVERB_FILTER_FIX" index="16">0x000ad265</value>
+			<value id="62" name="HC_REVERB_FILTER_FIX" index="17">0x0008ad7f</value>
+			<value id="63" name="HC_REVERB_FILTER_FIX" index="18">0x0006fcad</value>
+			<value id="64" name="HC_REVERB_FILTER_FIX" index="19">0x0005cfbb</value>
+			<value id="65" name="HC_PRE_DELAY">0x000000f0</value>
+			<value id="66" name="HC_NAP_BUF" index="0">0x00000207</value>
+			<value id="67" name="HC_NAP_BUF" index="1">0x0000018a</value>
+			<value id="68" name="HC_NAP_BUF" index="2">0x0000012c</value>
+			<value id="69" name="HC_NAP_BUF" index="3">0x000000e4</value>
+			<value id="70" name="HC_ER_FILTER_FIX" index="0">0x00400000</value>
+			<value id="71" name="HC_ER_FILTER_FIX" index="1">0x00400000</value>
+			<value id="72" name="HC_ER_FILTER_FIX" index="2">0x00400000</value>
+			<value id="73" name="HC_ER_FILTER_FIX" index="3">0x00400000</value>
+			<value id="74" name="HC_ER_FILTER_FIX" index="4">0x00400000</value>
+			<value id="75" name="HC_ER_FILTER_FIX" index="5">0x00400000</value>
+			<value id="76" name="HC_ER_FILTER_FIX" index="6">0x00400000</value>
+			<value id="77" name="HC_ER_FILTER_FIX" index="7">0x00400000</value>
+			<value id="78" name="HC_ER_FILTER_FIX" index="8">0x00400000</value>
+			<value id="79" name="HC_ER_FILTER_FIX" index="9">0x00400000</value>
+			<value id="80" name="HC_ER_FILTER_FIX" index="10">0x0042f79e</value>
+			<value id="81" name="HC_ER_FILTER_FIX" index="11">0x0053e4dd</value>
+			<value id="82" name="HC_ER_FILTER_FIX" index="12">0x0069c832</value>
+			<value id="83" name="HC_ER_FILTER_FIX" index="13">0x007fb261</value>
+			<value id="84" name="HC_ER_FILTER_FIX" index="14">0x007fb261</value>
+			<value id="85" name="HC_ER_FILTER_FIX" index="15">0x007fb261</value>
+			<value id="86" name="HC_ER_FILTER_FIX" index="16">0x007fb261</value>
+			<value id="87" name="HC_ER_FILTER_FIX" index="17">0x007fb261</value>
+			<value id="88" name="HC_ER_FILTER_FIX" index="18">0x007fb261</value>
+			<value id="89" name="HC_ER_FILTER_FIX" index="19">0x007fb261</value>
+			<value id="90" name="HC_EL_SH_A" index="0">0xffea22a9</value>
+			<value id="91" name="HC_EL_SH_A" index="1">0x00082bc4</value>
+			<value id="92" name="HC_EL_SH_B" index="0">0x0014c8c6</value>
+			<value id="93" name="HC_EL_SH_B" index="1">0xfff99b83</value>
+			<value id="94" name="HC_EL_SH_B" index="2">0x0003ea24</value>
+			<value id="95" name="HC_EL_PK_A" index="0">0xffc3bbee</value>
+			<value id="96" name="HC_EL_PK_A" index="1">0x001d0462</value>
+			<value id="97" name="HC_EL_PK_B" index="0">0x0021d8f4</value>
+			<value id="98" name="HC_EL_PK_B" index="1">0xffc3bbee</value>
+			<value id="99" name="HC_EL_PK_B" index="2">0x001b2b6e</value>
+			<value id="100" name="HC_EL_PK2_A" index="0">0xffe32030</value>
+			<value id="101" name="HC_EL_PK2_A" index="1">0x0019bfa0</value>
+			<value id="102" name="HC_EL_PK2_B" index="0">0x0021d406</value>
+			<value id="103" name="HC_EL_PK2_B" index="1">0xffe32030</value>
+			<value id="104" name="HC_EL_PK2_B" index="2">0x0017eb9a</value>
+			<value id="105" name="HC_APGAIN">0x004ccccc</value>
+			<value id="106" name="HC_HEADROOM">0x0032f52c</value>
+			<value id="107" name="HC_POSTGAIN">0x002830af</value>
+		</INIT>
+		<VAR>
+			<value id="0" name="_DUMMY_LGSE5_HC_ROOM_MODEL_GAIN_FIX_0">0x00000000</value>
+			<value id="1" name="HC_ROOM_MODEL_GAIN_FIX">0x00100000</value>
+			<value id="2" name="_DUMMY_LGSE5_HC_AMBIENT_GAIN_FIX_0">0x00000000</value>
+			<value id="3" name="HC_AMBIENT_GAIN_FIX">0x00024409</value>
+			<value id="4" name="_DUMMY_LGSE5_HC_EARLY_REFLECTION_GAIN_FIX_0">0x00000000</value>
+			<value id="5" name="HC_EARLY_REFLECTION_GAIN_FIX">0x001cbdca</value>
+			<value id="6" name="HC_EARLY_REFLECTION_ENABLE">0x00000001</value>
+			<value id="7" name="HC_AMBIENT_3D_ENABLE">0x00000001</value>
+			<value id="8" name="HC_LOWCUT_ENABLE">0x00000000</value>
+			<value id="9" name="HC_ROOM_MODEL_ENABLE">0x00000001</value>
+			<value id="10" name="HC_BLAUERT_ENABLE">0x00000001</value>
+		</VAR>
+	</LGSE_FUNCTION>
+</LGSE_API>

@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<LGSE_API version="6.3">
+	<libLGSE_Compatibility>0x06030001</libLGSE_Compatibility>
+	<LGSE_FUNCTION>
+		<ID>001</ID>
+		<NAME>AUTOMATIC_GAIN_CONTROL</NAME>
+		<FLAG>0x00000000</FLAG>
+		<INIT>
+			<value id="0" name="NUM_STAT_FRAME">0x00000040</value>
+			<value id="1" name="WEIGHT_GAIN_FIX" index="0">0x00575e99</value>
+			<value id="2" name="WEIGHT_GAIN_FIX" index="1">0x007fffff</value>
+			<value id="3" name="WEIGHT_GAIN_FIX" index="2">0x007fffff</value>
+			<value id="4" name="WEIGHT_GAIN_FIX" index="3">0x007fffff</value>
+			<value id="5" name="WEIGHT_GAIN_FIX" index="4">0x007fffff</value>
+			<value id="6" name="WEIGHT_GAIN_FIX" index="5">0x007fffff</value>
+			<value id="7" name="WEIGHT_GAIN_FIX" index="6">0x007fffff</value>
+			<value id="8" name="WEIGHT_GAIN_FIX" index="7">0x007fffff</value>
+			<value id="9" name="WEIGHT_GAIN_FIX" index="8">0x007fffff</value>
+			<value id="10" name="WEIGHT_GAIN_FIX" index="9">0x007fffff</value>
+			<value id="11" name="WEIGHT_GAIN_FIX" index="10">0x007fffff</value>
+			<value id="12" name="WEIGHT_GAIN_FIX" index="11">0x007fffff</value>
+			<value id="13" name="WEIGHT_GAIN_FIX" index="12">0x007fffff</value>
+			<value id="14" name="WEIGHT_GAIN_FIX" index="13">0x007fffff</value>
+			<value id="15" name="WEIGHT_GAIN_FIX" index="14">0x007fffff</value>
+			<value id="16" name="WEIGHT_GAIN_FIX" index="15">0x007fffff</value>
+			<value id="17" name="WEIGHT_GAIN_FIX" index="16">0x007fffff</value>
+			<value id="18" name="WEIGHT_GAIN_FIX" index="17">0x007fffff</value>
+			<value id="19" name="WEIGHT_GAIN_FIX" index="18">0x00575e99</value>
+			<value id="20" name="WEIGHT_GAIN_FIX" index="19">0x0032edab</value>
+		</INIT>
+		<VAR>
+			<value id="0" name="TARGET_10LOG10">0x00000000</value>
+			<value id="1" name="TARGET">0x00000000</value>
+			<value id="2" name="MIN_XPOW">0x00020756</value>
+			<value id="3" name="NOISE_SMOOTH">0x00000000</value>
+			<value id="4" name="MINMAX_SMOOTH">0x000ccccc</value>
+			<value id="5" name="AGC_GAIN_LIMIT" index="0">0x00000000</value>
+			<value id="6" name="AGC_GAIN_LIMIT" index="1">0x00000000</value>
+			<value id="7" name="AGC_GATING1" index="0">0x00144960</value>
+			<value id="8" name="AGC_GATING1" index="1">0x000147ae</value>
+			<value id="9" name="AGC_GATING1" index="2">0x00000000</value>
+			<value id="10" name="AGC_GATING2" index="0">0x000ccccc</value>
+			<value id="11" name="AGC_GATING2" index="1">0x0000a43a</value>
+			<value id="12" name="AGC_GATING2" index="2">0x00001a07</value>
+			<value id="13" name="AGC_GATING_BOUND" index="0">0x005a9df7</value>
+			<value id="14" name="AGC_GATING_BOUND" index="1">0x0065ac8c</value>
+			<value id="15" name="DRC_GAIN_LIMIT" index="0">0x00040000</value>
+			<value id="16" name="DRC_GAIN_LIMIT" index="1">0x00060000</value>
+			<value id="17" name="DRC_RATIO" index="0">0x00066666</value>
+			<value id="18" name="DRC_RATIO" index="1">0x00066666</value>
+			<value id="19" name="POP_GATING" index="0">0x007d161c</value>
+			<value id="20" name="POP_GATING" index="1">0x00008273</value>
+			<value id="21" name="POP_GATING" index="2">0x0003120c</value>
+			<value id="22" name="POP_INIT_GAIN">0x00392ced</value>
+			<value id="23" name="POP_THRESHOLD" index="0">0x004026e7</value>
+			<value id="24" name="POP_THRESHOLD" index="1">0x00287a26</value>
+			<value id="25" name="LIMITER_TARGET_DB">0xfff20000</value>
+			<value id="26" name="LIMITER_GATING" index="0">0x00144960</value>
+			<value id="27" name="LIMITER_GATING" index="1">0x0012149a</value>
+			<value id="28" name="LIMITER_GATING" index="2">0x00020756</value>
+			<value id="29" name="MAXGAIN_FOR_VOLUME" index="0">0x001c73d5</value>
+			<value id="30" name="MAXGAIN_FOR_VOLUME" index="1">0x001e236d</value>
+			<value id="31" name="MAXGAIN_FOR_VOLUME" index="2">0x001fec98</value>
+			<value id="32" name="MAXGAIN_FOR_VOLUME" index="3">0x0021d0d9</value>
+			<value id="33" name="MAXGAIN_FOR_VOLUME" index="4">0x0023d1cd</value>
+			<value id="34" name="MAXGAIN_FOR_VOLUME" index="5">0x0025f125</value>
+			<value id="35" name="MAXGAIN_FOR_VOLUME" index="6">0x002830af</value>
+			<value id="36" name="MAXGAIN_FOR_VOLUME" index="7">0x002830af</value>
+			<value id="37" name="MAXGAIN_FOR_VOLUME" index="8">0x002830af</value>
+			<value id="38" name="MAXGAIN_FOR_VOLUME" index="9">0x002830af</value>
+			<value id="39" name="MAXGAIN_FOR_VOLUME" index="10">0x00000000</value>
+			<value id="40" name="VERSION">0x00111111</value>
+			<value id="41" name="AGC_TARGET_DB">0xffe20000</value>
+			<value id="42" name="DRC_TARGET_DB">0xffe20000</value>
+			<value id="43" name="AGC_GAIN_LIMIT_DB" index="0">0x00080000</value>
+			<value id="44" name="AGC_GAIN_LIMIT_DB" index="1">0x000c0000</value>
+			<value id="45" name="AGC_RATIO" index="0">0x00200000</value>
+			<value id="46" name="AGC_RATIO" index="1">0x00200000</value>
+			<value id="47" name="MAXGAIN_GATING" index="0">0x000246b4</value>
+			<value id="48" name="MAXGAIN_GATING" index="1">0x00020756</value>
+			<value id="49" name="MAXGAIN_GATING" index="2">0x000ccccc</value>
+			<value id="50" name="MAXGAIN_FOR_ENERGY" index="0">0x00100000</value>
+			<value id="51" name="MAXGAIN_FOR_ENERGY" index="1">0x00100000</value>
+			<value id="52" name="MAXGAIN_FOR_ENERGY" index="2">0x00100000</value>
+			<value id="53" name="MAXGAIN_FOR_ENERGY" index="3">0x00100000</value>
+			<value id="54" name="MAXGAIN_FOR_ENERGY" index="4">0x00100000</value>
+			<value id="55" name="MAXGAIN_FOR_ENERGY" index="5">0x00100000</value>
+			<value id="56" name="MAXGAIN_FOR_ENERGY" index="6">0x00100000</value>
+			<value id="57" name="MAXGAIN_FOR_ENERGY" index="7">0x00100000</value>
+			<value id="58" name="MAXGAIN_FOR_ENERGY" index="8">0x00100000</value>
+			<value id="59" name="MAXGAIN_FOR_ENERGY" index="9">0x00100000</value>
+			<value id="60" name="NOUSE" index="0">0x00000000</value>
+			<value id="61" name="NOUSE" index="1">0x00000000</value>
+			<value id="62" name="NOUSE" index="2">0x00000000</value>
+			<value id="63" name="NOUSE" index="3">0x00000000</value>
+			<value id="64" name="NOUSE" index="4">0x00000000</value>
+			<value id="65" name="NOUSE" index="5">0x00000000</value>
+			<value id="66" name="NOUSE" index="6">0x00000000</value>
+			<value id="67" name="NOUSE" index="7">0x00000000</value>
+			<value id="68" name="NOUSE" index="8">0x00000000</value>
+			<value id="69" name="NOUSE" index="9">0x00000000</value>
+			<value id="70" name="NOUSE" index="10">0x00000000</value>
+			<value id="71" name="NOUSE" index="11">0x00000000</value>
+			<value id="72" name="NOUSE" index="12">0x00000000</value>
+			<value id="73" name="NOUSE" index="13">0x00000000</value>
+			<value id="74" name="NOUSE" index="14">0x00000000</value>
+			<value id="75" name="NOUSE" index="15">0x00000000</value>
+			<value id="76" name="NOUSE" index="16">0x00000000</value>
+			<value id="77" name="NOUSE" index="17">0x00000000</value>
+			<value id="78" name="NOUSE" index="18">0x00000000</value>
+			<value id="79" name="NOUSE" index="19">0x00000000</value>
+			<value id="80" name="NOUSE" index="20">0x00000000</value>
+			<value id="81" name="NOUSE" index="21">0x00000000</value>
+			<value id="82" name="NOUSE" index="22">0x00000000</value>
+			<value id="83" name="NOUSE" index="23">0x00000000</value>
+			<value id="84" name="NOUSE" index="24">0x00000000</value>
+			<value id="85" name="NOUSE" index="25">0x00000000</value>
+			<value id="86" name="NOUSE" index="26">0x00000000</value>
+			<value id="87" name="NOUSE" index="27">0x00000000</value>
+			<value id="88" name="NOUSE" index="28">0x00000000</value>
+			<value id="89" name="NOUSE" index="29">0x00000000</value>
+			<value id="90" name="NOUSE" index="30">0x00000000</value>
+			<value id="91" name="NOUSE" index="31">0x00000000</value>
+			<value id="92" name="NOUSE" index="32">0x00000000</value>
+			<value id="93" name="NOUSE" index="33">0x00000000</value>
+			<value id="94" name="NOUSE" index="34">0x00000000</value>
+			<value id="95" name="NOUSE" index="35">0x00000000</value>
+			<value id="96" name="NOUSE" index="36">0x00000000</value>
+			<value id="97" name="NOUSE" index="37">0x00000000</value>
+			<value id="98" name="NOUSE" index="38">0x00000000</value>
+			<value id="99" name="NOUSE" index="39">0x00000000</value>
+			<value id="100" name="NOUSE" index="40">0x00000000</value>
+			<value id="101" name="NOUSE" index="41">0x00000000</value>
+			<value id="102" name="NOUSE" index="42">0x00000000</value>
+			<value id="103" name="NOUSE" index="43">0x00000000</value>
+			<value id="104" name="NOUSE" index="44">0x00000000</value>
+			<value id="105" name="NOUSE" index="45">0x00000000</value>
+			<value id="106" name="NOUSE" index="46">0x00000000</value>
+			<value id="107" name="NOUSE" index="47">0x00000000</value>
+			<value id="108" name="NOUSE" index="48">0x00000000</value>
+			<value id="109" name="NOUSE" index="49">0x00000000</value>
+			<value id="110" name="NOUSE" index="50">0x00000000</value>
+			<value id="111" name="NOUSE" index="51">0x00000000</value>
+			<value id="112" name="NOUSE" index="52">0x00000000</value>
+			<value id="113" name="NOUSE" index="53">0x00000000</value>
+			<value id="114" name="NOUSE" index="54">0x00000000</value>
+			<value id="115" name="NOUSE" index="55">0x00000000</value>
+			<value id="116" name="NOUSE" index="56">0x00000000</value>
+			<value id="117" name="NOUSE" index="57">0x00000000</value>
+			<value id="118" name="NOUSE" index="58">0x00000000</value>
+			<value id="119" name="NOUSE" index="59">0x00000000</value>
+			<value id="120" name="NOUSE" index="60">0x00000000</value>
+			<value id="121" name="NOUSE" index="61">0x00000000</value>
+			<value id="122" name="NOUSE" index="62">0x00000000</value>
+			<value id="123" name="NOUSE" index="63">0x00000000</value>
+			<value id="124" name="NOUSE" index="64">0x00000000</value>
+			<value id="125" name="NOUSE" index="65">0x00000000</value>
+			<value id="126" name="NOUSE" index="66">0x00000000</value>
+			<value id="127" name="NOUSE" index="67">0x00000000</value>
+			<value id="128" name="NOUSE" index="68">0x00000000</value>
+			<value id="129" name="NOUSE" index="69">0x00000000</value>
+		</VAR>
+	</LGSE_FUNCTION>
+</LGSE_API>

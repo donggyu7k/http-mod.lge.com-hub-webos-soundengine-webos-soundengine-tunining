@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<LGSE_API version="6.3">
+	<libLGSE_Compatibility>0x06030001</libLGSE_Compatibility>
+	<LGSE_FUNCTION>
+		<ID>016</ID>
+		<NAME>LIMITER</NAME>
+		<FLAG>0x00000000</FLAG>
+		<INIT>
+			<value id="0" name="VERSION">0x00010001</value>
+			<value id="1" name="NOUSE" index="0">0x00000000</value>
+			<value id="2" name="NOUSE" index="1">0x00000000</value>
+			<value id="3" name="NOUSE" index="2">0x00000000</value>
+			<value id="4" name="NOUSE" index="3">0x00000000</value>
+			<value id="5" name="NOUSE" index="4">0x00000000</value>
+			<value id="6" name="NOUSE" index="5">0x00000000</value>
+			<value id="7" name="NOUSE" index="6">0x00000000</value>
+			<value id="8" name="NOUSE" index="7">0x00000000</value>
+			<value id="9" name="NOUSE" index="8">0x00000000</value>
+			<value id="10" name="NOUSE" index="9">0x00000000</value>
+			<value id="11" name="NOUSE" index="10">0x00000000</value>
+			<value id="12" name="NOUSE" index="11">0x00000000</value>
+			<value id="13" name="NOUSE" index="12">0x00000000</value>
+			<value id="14" name="NOUSE" index="13">0x00000000</value>
+			<value id="15" name="NOUSE" index="14">0x00000000</value>
+			<value id="16" name="NOUSE" index="15">0x00000000</value>
+			<value id="17" name="NOUSE" index="16">0x00000000</value>
+			<value id="18" name="NOUSE" index="17">0x00000000</value>
+			<value id="19" name="NOUSE" index="18">0x00000000</value>
+			<value id="20" name="NOUSE" index="19">0x00000000</value>
+			<value id="21" name="NOUSE" index="20">0x00000000</value>
+			<value id="22" name="NOUSE" index="21">0x00000000</value>
+			<value id="23" name="NOUSE" index="22">0x00000000</value>
+			<value id="24" name="NOUSE" index="23">0x00000000</value>
+			<value id="25" name="NOUSE" index="24">0x00000000</value>
+			<value id="26" name="NOUSE" index="25">0x00000000</value>
+			<value id="27" name="NOUSE" index="26">0x00000000</value>
+			<value id="28" name="NOUSE" index="27">0x00000000</value>
+			<value id="29" name="NOUSE" index="28">0x00000000</value>
+			<value id="30" name="NOUSE" index="29">0x00000000</value>
+			<value id="31" name="NOUSE" index="30">0x00000000</value>
+			<value id="32" name="NOUSE" index="31">0x00000000</value>
+			<value id="33" name="NOUSE" index="32">0x00000000</value>
+			<value id="34" name="NOUSE" index="33">0x00000000</value>
+			<value id="35" name="NOUSE" index="34">0x00000000</value>
+			<value id="36" name="NOUSE" index="35">0x00000000</value>
+			<value id="37" name="NOUSE" index="36">0x00000000</value>
+			<value id="38" name="NOUSE" index="37">0x00000000</value>
+			<value id="39" name="NOUSE" index="38">0x00000000</value>
+			<value id="40" name="NOUSE" index="39">0x00000000</value>
+			<value id="41" name="NOUSE" index="40">0x00000000</value>
+			<value id="42" name="NOUSE" index="41">0x00000000</value>
+			<value id="43" name="NOUSE" index="42">0x00000000</value>
+			<value id="44" name="NOUSE" index="43">0x00000000</value>
+			<value id="45" name="NOUSE" index="44">0x00000000</value>
+			<value id="46" name="NOUSE" index="45">0x00000000</value>
+			<value id="47" name="NOUSE" index="46">0x00000000</value>
+			<value id="48" name="NOUSE" index="47">0x00000000</value>
+			<value id="49" name="NOUSE" index="48">0x00000000</value>
+		</INIT>
+		<VAR>
+			<value id="0" name="VERSION">0x00010001</value>
+			<value id="1" name="HEADROOM">0x00101d3f</value>
+			<value id="2" name="POSTGAIN">0x007f17af</value>
+			<value id="3" name="MINPOW">0x0000679f</value>
+			<value id="4" name="ATTACK">0x002026f3</value>
+			<value id="5" name="RELEASE">0x00287a26</value>
+			<value id="6" name="UPPER_HOLD">0x00101d3f</value>
+			<value id="7" name="LOWER_HOLD">0x00000a5c</value>
+			<value id="8" name="UPPER_THRESHOLD">0x001fec98</value>
+			<value id="9" name="LOWER_THRESHOLD">0x004026e7</value>
+			<value id="10" name="LIMITER_TARGET">0x00000cf3</value>
+			<value id="11" name="DRC_TARGET">0xfff38000</value>
+			<value id="12" name="DRC_RATIO">0x000b3333</value>
+			<value id="13" name="DRC_SOFTKNEE">0x00000000</value>
+			<value id="14" name="GAIN_ATTACK">0x000147ae</value>
+			<value id="15" name="GAIN_RELEASE">0x000147ae</value>
+			<value id="16" name="NOUSE" index="0">0x00000000</value>
+			<value id="17" name="NOUSE" index="1">0x00000000</value>
+			<value id="18" name="NOUSE" index="2">0x00000000</value>
+			<value id="19" name="NOUSE" index="3">0x00000000</value>
+			<value id="20" name="NOUSE" index="4">0x00000000</value>
+			<value id="21" name="NOUSE" index="5">0x00000000</value>
+			<value id="22" name="NOUSE" index="6">0x00000000</value>
+			<value id="23" name="NOUSE" index="7">0x00000000</value>
+			<value id="24" name="NOUSE" index="8">0x00000000</value>
+			<value id="25" name="NOUSE" index="9">0x00000000</value>
+			<value id="26" name="NOUSE" index="10">0x00000000</value>
+			<value id="27" name="NOUSE" index="11">0x00000000</value>
+			<value id="28" name="NOUSE" index="12">0x00000000</value>
+			<value id="29" name="NOUSE" index="13">0x00000000</value>
+			<value id="30" name="NOUSE" index="14">0x00000000</value>
+			<value id="31" name="NOUSE" index="15">0x00000000</value>
+			<value id="32" name="NOUSE" index="16">0x00000000</value>
+			<value id="33" name="NOUSE" index="17">0x00000000</value>
+			<value id="34" name="NOUSE" index="18">0x00000000</value>
+			<value id="35" name="NOUSE" index="19">0x00000000</value>
+			<value id="36" name="NOUSE" index="20">0x00000000</value>
+			<value id="37" name="NOUSE" index="21">0x00000000</value>
+			<value id="38" name="NOUSE" index="22">0x00000000</value>
+			<value id="39" name="NOUSE" index="23">0x00000000</value>
+			<value id="40" name="NOUSE" index="24">0x00000000</value>
+			<value id="41" name="NOUSE" index="25">0x00000000</value>
+			<value id="42" name="NOUSE" index="26">0x00000000</value>
+			<value id="43" name="NOUSE" index="27">0x00000000</value>
+			<value id="44" name="NOUSE" index="28">0x00000000</value>
+			<value id="45" name="NOUSE" index="29">0x00000000</value>
+			<value id="46" name="NOUSE" index="30">0x00000000</value>
+			<value id="47" name="NOUSE" index="31">0x00000000</value>
+			<value id="48" name="NOUSE" index="32">0x00000000</value>
+			<value id="49" name="NOUSE" index="33">0x00000000</value>
+			<value id="50" name="NOUSE" index="34">0x00000000</value>
+			<value id="51" name="NOUSE" index="35">0x00000000</value>
+			<value id="52" name="NOUSE" index="36">0x00000000</value>
+			<value id="53" name="NOUSE" index="37">0x00000000</value>
+			<value id="54" name="NOUSE" index="38">0x00000000</value>
+			<value id="55" name="NOUSE" index="39">0x00000000</value>
+			<value id="56" name="NOUSE" index="40">0x00000000</value>
+			<value id="57" name="NOUSE" index="41">0x00000000</value>
+			<value id="58" name="NOUSE" index="42">0x00000000</value>
+			<value id="59" name="NOUSE" index="43">0x00000000</value>
+			<value id="60" name="NOUSE" index="44">0x00000000</value>
+			<value id="61" name="NOUSE" index="45">0x00000000</value>
+			<value id="62" name="NOUSE" index="46">0x00000000</value>
+			<value id="63" name="NOUSE" index="47">0x00000000</value>
+			<value id="64" name="NOUSE" index="48">0x00000000</value>
+			<value id="65" name="NOUSE" index="49">0x00000000</value>
+			<value id="66" name="NOUSE" index="50">0x00000000</value>
+			<value id="67" name="NOUSE" index="51">0x00000000</value>
+			<value id="68" name="NOUSE" index="52">0x00000000</value>
+			<value id="69" name="NOUSE" index="53">0x00000000</value>
+			<value id="70" name="NOUSE" index="54">0x00000000</value>
+			<value id="71" name="NOUSE" index="55">0x00000000</value>
+			<value id="72" name="NOUSE" index="56">0x00000000</value>
+			<value id="73" name="NOUSE" index="57">0x00000000</value>
+			<value id="74" name="NOUSE" index="58">0x00000000</value>
+			<value id="75" name="NOUSE" index="59">0x00000000</value>
+			<value id="76" name="NOUSE" index="60">0x00000000</value>
+			<value id="77" name="NOUSE" index="61">0x00000000</value>
+			<value id="78" name="NOUSE" index="62">0x00000000</value>
+			<value id="79" name="NOUSE" index="63">0x00000000</value>
+			<value id="80" name="NOUSE" index="64">0x00000000</value>
+			<value id="81" name="NOUSE" index="65">0x00000000</value>
+			<value id="82" name="NOUSE" index="66">0x00000000</value>
+			<value id="83" name="NOUSE" index="67">0x00000000</value>
+			<value id="84" name="NOUSE" index="68">0x00000000</value>
+			<value id="85" name="NOUSE" index="69">0x00000000</value>
+			<value id="86" name="NOUSE" index="70">0x00000000</value>
+			<value id="87" name="NOUSE" index="71">0x00000000</value>
+			<value id="88" name="NOUSE" index="72">0x00000000</value>
+			<value id="89" name="NOUSE" index="73">0x00000000</value>
+			<value id="90" name="NOUSE" index="74">0x00000000</value>
+			<value id="91" name="NOUSE" index="75">0x00000000</value>
+			<value id="92" name="NOUSE" index="76">0x00000000</value>
+			<value id="93" name="NOUSE" index="77">0x00000000</value>
+			<value id="94" name="NOUSE" index="78">0x00000000</value>
+			<value id="95" name="NOUSE" index="79">0x00000000</value>
+			<value id="96" name="NOUSE" index="80">0x00000000</value>
+			<value id="97" name="NOUSE" index="81">0x00000000</value>
+			<value id="98" name="NOUSE" index="82">0x00000000</value>
+			<value id="99" name="NOUSE" index="83">0x00000000</value>
+		</VAR>
+	</LGSE_FUNCTION>
+</LGSE_API>

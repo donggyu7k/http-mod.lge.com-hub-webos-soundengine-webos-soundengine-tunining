@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<LGSE_API version="6.3">
+	<libLGSE_Compatibility>0x06030004</libLGSE_Compatibility>
+	<LGSE_FUNCTION>
+		<ID>004</ID>
+		<NAME>FN025UserEQ</NAME>
+		<FLAG>0x000000ff</FLAG>
+		<VAR>
+			<value id="0" name="FILTER_INDEX" index="0">0x00000006</value>
+			<value id="1" name="FILTER_COEFFICIENT" index="0">0xffc9439c</value>
+			<value id="2" name="FILTER_COEFFICIENT" index="1">0x0018aab2</value>
+			<value id="3" name="FILTER_COEFFICIENT" index="2">0x002c2e3c</value>
+			<value id="4" name="FILTER_COEFFICIENT" index="3">0xffb24903</value>
+			<value id="5" name="FILTER_COEFFICIENT" index="4">0x0023770e</value>
+			<value id="6" name="FREQUENCY" index="39">2000</value>
+			<value id="7" name="GAIN" index="40">30</value>
+			<value id="8" name="Q" index="41">10</value>
+			<value id="9" name="TYPE" index="42">2</value>
+		</VAR>
+	</LGSE_FUNCTION>
+</LGSE_API>

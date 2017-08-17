@@ -18,8 +18,8 @@
 			<value id="9" name="NOUSE" index="7">0x00000000</value>
 		</INIT>
 		<VAR>
-			<value id="0" name="MASTER_GAIN_INDEX">0x00000000</value>
-			<value id="1" name="MASTER_GAIN_VALUE">0x000ccccc</value>
+			<value id="0" name="MASTER_GAIN_INDEX">0xffffffff</value>
+			<value id="1" name="MASTER_GAIN_VALUE">0x00198a13</value>
 		</VAR>
 	</LGSE_FUNCTION>
 </LGSE_API>

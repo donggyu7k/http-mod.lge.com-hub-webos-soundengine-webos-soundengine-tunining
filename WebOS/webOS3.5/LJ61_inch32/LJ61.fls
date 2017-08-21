@@ -1,6 +1,0 @@
-PWD /Users/Kichul_Office/Documents/LGSE_SRC/LGSE_QA_TUNNING/WebOS/webOS4.0/LJ61_inch32
-INPUT /usr/local/texlive/2014/texmf.cnf
-INPUT /usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT LJ61.tex
-OUTPUT LJ61.log

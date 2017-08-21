@@ -83,23 +83,25 @@
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
 
-\title[WebOS 3.5 QA spec \alert{LGE CONFIDENTIAL}] % (optional, use only with long paper titles)
-{LGSE QA Test Manual Ver.8}
+\title[WebOS 3.5 MR Minor QA spec \alert{LGE CONFIDENTIAL}] % (optional, use only with long paper titles)
+{LGSE QA Test Manual Ver.11}
 
 \subtitle
-{for M16P/K3LP/M2R - WebOS 3.5} % (optional)
+{for M16P/K3LP/M2R - WebOS 3.5 MR Minor} % (optional)
 
 
-\author[Kichul Kim] % (optional, use only with lots of authors)
-{Kichul Kim (kichul.kim@lge.com)}
+\author[editor-Kichul Kim, Sunha Jeon] % (optional, use only with lots of authors)
+{Release : Sunha Jeon(sunha.jeon@lge.com)}
+%Editor : Kichul Kim (kichul.kim@lge.com)
 % - Use the \inst{?} command only if the authors have different
 %   affiliation.
 
 \institute[IPT team, SIC lab., LG Electronics] % (optional, but mostly needed)
 {
   IPT team, SIC lab., LG Electronics \\
-  Release Link: (http://collab.lge.com/main/x/0hVwG)
+  Release Link: (http://collab.lge.com/main/display/LGSE/LGSE+QA+Test+Manual)
   }
+%http://collab.lge.com/main/display/LGSE/LGSE6.2_WO3.5_M16P_K3LP_M2R
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
@@ -169,6 +171,11 @@
 \begin{frame}[t]{History}
 \begin{itemize}
 \begin{scriptsize}
+\item 2017.08.21\_Ver.11 ATMOS on/off  스펙 추가 (LGSE6.2 ATMOS OFF)
+
+\item 2017.04.21\_Ver.10 W7 / C7, B7, 55E7 / G7, E7 (77, 65) / 86SJ95,75SJ95,SJ85,UJ98 / UHD/ SmartSound Store,SoundMode (Cinema)  스펙변경
+
+\item 2017.03.07\_Ver.9 W7 / C7, B7, 55E7 / G7, E7 (77, 65) / 86SJ95,75SJ95,SJ85,UJ98 / UHD/ SmartSound,SoundMode (Cinema, Clear Voice, Sports, Music, Game, Surround)  스펙변경
 
 \item 2016.11.25\_Ver.8 W7 스펙 변경 / C7, B7, 55E7 스펙 변경 / 65E7 스펙 변경
 
@@ -178,7 +185,7 @@
 
 \item 2016.11.11\_Ver.5 (43,49,55)LJ61 Cinema, Sports, Music, Game, Surround / SJ95, SJ85, SJ80, UJ75, UJ74, UJ63, UJ61 Smart Sound Store 스펙 변경	
 
-\item 2016.11.09\_Ver.4 65SJ95, 55SJ95, SJ85, SJ80, UJ75, UJ74, UJ63, UJ61 스펙 변경 / 75SJ95, 86SJ95 스펙 추가 / 55E7 스펙 추가 / UJ65스펙 추가 / 32LJ61 surround 스펙 변경 / (43,49,55)LJ61 sports 스펙 변경
+\item 2016.11.09\_Ver.4 65SJ95, 55SJ95, SJ85, SJ80, UJ75, UJ74, UJ63, UJ61 스펙 변경 / 75SJ95, 86SJ95 스펙 추가 / 55E7 스펙 추가 / UJ65스펙 추가 / 32LJ61 surround 스펙 변경 / (43,49,55)%LJ61 sports 스펙 변경
 
 \item 2016.10.31\_Ver.3 SJ95, SJ85, SJ80, UJ75, UJ74, UJ63, UJ61 모델 Surround, Game, Sports, Smart Sound, Cinema 스펙 변경 / 측정 기준신호 크기 변경
 
@@ -188,7 +195,6 @@
 \end{scriptsize}
 \end{itemize}
 \end{frame}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -395,7 +401,7 @@
 \huge \item W7
 \end{itemize}
 \end{frame}
-\subimport{../W7/}{W7.tex}
+\subimport{../W7/}{W7.tex}				%DONE
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -409,8 +415,19 @@
 \huge \item E7 (55인치)
 \end{itemize}
 \end{frame}
-\subimport{../C7_B7/}{C7.tex}
+\subimport{../55_C7_B7/}{C7_B7.tex}	%done
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}[t]{}
+%\tableofcontents
+%\huge
+%\begin{itemize}
+%\large \item 다음 모델들의 스펙은 동일합니다.
+%\huge \item E7 (55인치)
+%\end{itemize}
+%\end{frame}
+%\subimport{../55E7/}{55E7.tex}			%done
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[t]{}
@@ -418,21 +435,10 @@
 \huge
 \begin{itemize}
 \large \item 다음 모델들의 스펙은 동일합니다.
-\huge \item E7 (65인치)
+\huge \item G7, E7(77인치, 65인치)
 \end{itemize}
 \end{frame}
-\subimport{../65E7/}{65E7.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[t]{}
-\tableofcontents
-\huge
-\begin{itemize}
-\large \item 다음 모델들의 스펙은 동일합니다.
-\huge \item G7
-\end{itemize}
-\end{frame}
-\subimport{../G7/}{G7.tex}
+\subimport{../77_65_G7_E7/}{77_65_G7_E7.tex}			%done
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -441,31 +447,49 @@
 \large
 \begin{itemize}
 \large \item 다음 모델들의 스펙은 동일합니다.
-\large \item 75SJ95, 86SJ95
-\end{itemize}
-\end{frame}
-
-\subimport{../SJ95/}{SJ95.tex}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\begin{frame}[t]{}
-\tableofcontents
-\large
-\begin{itemize}
-\large \item 다음 모델들의 스펙은 동일합니다.
-\large \item 65SJ95, 55SJ95
+\large \item 86, 75인치,
+\large \item 86SJ95, 75SJ95, 
 \large \item SJ85
-\large \item SJ80
-\large \item UJ75
-\large \item UJ74
-\large \item UJ65
-\large \item UJ63
-\large \item UJ61
+\large \item UJ98
 \end{itemize}
 \end{frame}
 
-\subimport{../SJ95_SJ85_SJ80_UJ75_UJ74_UJ63_UJ61/}{SJ95.tex}
+\subimport{../86_75_SJ95_SJ85_UJ98/}{SJ95.tex}			%DONE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}[t]{}
+\tableofcontents
+\large
+\begin{itemize}
+\large \item 다음 모델들의 스펙은 동일합니다.
+\large \item 65인치 이하, 
+\large \item SJ95, SJ85, SJ80, UJ75, UJ65, UJ63
+\end{itemize}
+\end{frame}
+
+\subimport{../65_UHD_SJ95_85_80_UJ75_65_63/}{UHD.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%\begin{frame}[t]{}
+%\tableofcontents
+%\large
+%\begin{itemize}
+%\large \item 다음 모델들의 스펙은 동일합니다.
+%\large \item 65SJ95, 55SJ95
+%\large \item SJ85
+%\large \item SJ80
+%\large \item UJ75
+%\large \item UJ74
+%\large \item UJ65
+%\large \item UJ63
+%\large \item UJ61
+%\end{itemize}
+%\end{frame}
+%
+%\subimport{../SJ95_SJ85_SJ80_UJ75_UJ74_UJ63_UJ61/}{SJ95.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -478,7 +502,7 @@
 \end{itemize}
 \end{frame}
 
-\subimport{../LJ61_inch32/}{LJ61.tex}
+\subimport{../32_FHD/}{LJ61.tex}		%done
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -487,11 +511,11 @@
 \huge
 \begin{itemize}
 \large \item 다음 모델들의 스펙은 동일합니다.
-\huge \item 43LJ61, 49LJ61, 55LJ61
+\huge \item 43LJ61, 49LJ61, 55LJ61, 
 \end{itemize}
 \end{frame}
 
-\subimport{../LJ61_inch43_49_55/}{LJ61.tex}
+\subimport{../43_49_55_FHD_LJ61/}{LJ61.tex}			%done
 
 
 

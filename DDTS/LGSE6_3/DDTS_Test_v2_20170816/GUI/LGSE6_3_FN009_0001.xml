@@ -7,7 +7,7 @@
 		<FLAG>0x00000000</FLAG>
 		<INIT>
 			<value id="0" name="VERSION" index="0">0x00010001</value>
-			<value id="1" name="SMOOTHING" index="1">0x0000a3d7</value>
+			<value id="1" name="SMOOTHING" index="0">0x0000a3d7</value>
 			<value id="2" name="NOUSE" index="0">0x00000000</value>
 			<value id="3" name="NOUSE" index="1">0x00000000</value>
 			<value id="4" name="NOUSE" index="2">0x00000000</value>
@@ -19,7 +19,7 @@
 		</INIT>
 		<VAR>
 			<value id="0" name="MASTER_GAIN_INDEX">0xffffffff</value>
-			<value id="1" name="MASTER_GAIN_VALUE">0x00198a13</value>
+			<value id="1" name="MASTER_GAIN_VALUE">0x000ccccc</value>
 		</VAR>
 	</LGSE_FUNCTION>
 </LGSE_API>

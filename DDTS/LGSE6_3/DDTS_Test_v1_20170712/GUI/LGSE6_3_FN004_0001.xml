@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.3">
-	<libLGSE_Compatibility>0x06030004</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x06030003</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>004</ID>
 		<NAME>FN004SoundMode</NAME>
@@ -26,31 +26,31 @@
 			<value id="17" name="FILTER_COEFFICIENT" index="17">0x00192184</value>
 			<value id="18" name="FILTER_COEFFICIENT" index="18">0xfff054a9</value>
 			<value id="19" name="FILTER_COEFFICIENT" index="19">0xfff7d454</value>
-			<value id="20" name="FILTER_COEFFICIENT" index="20">0xfffe03c5</value>
-			<value id="21" name="FILTER_COEFFICIENT" index="21">0xffe7abaa</value>
-			<value id="22" name="FILTER_COEFFICIENT" index="22">0x001cefe6</value>
-			<value id="23" name="FILTER_COEFFICIENT" index="23">0xfffe03c5</value>
-			<value id="24" name="FILTER_COEFFICIENT" index="24">0xffeabbc3</value>
-			<value id="25" name="FREQUENCY" index="35">100</value>
-			<value id="26" name="GAIN" index="36">-10</value>
-			<value id="27" name="Q" index="37">1</value>
-			<value id="28" name="TYPE" index="38">0</value>
-			<value id="29" name="FREQUENCY" index="39">500</value>
-			<value id="30" name="GAIN" index="40">-30</value>
-			<value id="31" name="Q" index="41">1</value>
-			<value id="32" name="TYPE" index="42">0</value>
-			<value id="33" name="FREQUENCY" index="43">1000</value>
-			<value id="34" name="GAIN" index="44">-30</value>
-			<value id="35" name="Q" index="45">1</value>
-			<value id="36" name="TYPE" index="46">0</value>
-			<value id="37" name="FREQUENCY" index="47">3000</value>
-			<value id="38" name="GAIN" index="48">-30</value>
-			<value id="39" name="Q" index="49">1</value>
-			<value id="40" name="TYPE" index="50">0</value>
-			<value id="41" name="FREQUENCY" index="51">10000</value>
-			<value id="42" name="GAIN" index="52">-10</value>
-			<value id="43" name="Q" index="53">1</value>
-			<value id="44" name="TYPE" index="54">0</value>
+			<value id="20" name="FILTER_COEFFICIENT" index="20">0xfff67303</value>
+			<value id="21" name="FILTER_COEFFICIENT" index="21">0x0004e6b7</value>
+			<value id="22" name="FILTER_COEFFICIENT" index="22">0x001e86c9</value>
+			<value id="23" name="FILTER_COEFFICIENT" index="23">0xfff67303</value>
+			<value id="24" name="FILTER_COEFFICIENT" index="24">0x00065fed</value>
+			<value id="25" name="FREQUENCY" index="0">100</value>
+			<value id="26" name="GAIN" index="0">-10</value>
+			<value id="27" name="Q" index="0">1</value>
+			<value id="28" name="TYPE" index="28">0</value>
+			<value id="29" name="FREQUENCY" index="29">500</value>
+			<value id="30" name="GAIN" index="30">-30</value>
+			<value id="31" name="Q" index="31">1</value>
+			<value id="32" name="TYPE" index="32">0</value>
+			<value id="33" name="FREQUENCY" index="33">1000</value>
+			<value id="34" name="GAIN" index="34">-30</value>
+			<value id="35" name="Q" index="35">1</value>
+			<value id="36" name="TYPE" index="36">0</value>
+			<value id="37" name="FREQUENCY" index="37">3000</value>
+			<value id="38" name="GAIN" index="38">-30</value>
+			<value id="39" name="Q" index="39">1</value>
+			<value id="40" name="TYPE" index="40">0</value>
+			<value id="41" name="FREQUENCY" index="41">10000</value>
+			<value id="42" name="GAIN" index="42">-10</value>
+			<value id="43" name="Q" index="43">10</value>
+			<value id="44" name="TYPE" index="44">0</value>
 		</VAR>
 	</LGSE_FUNCTION>
 </LGSE_API>

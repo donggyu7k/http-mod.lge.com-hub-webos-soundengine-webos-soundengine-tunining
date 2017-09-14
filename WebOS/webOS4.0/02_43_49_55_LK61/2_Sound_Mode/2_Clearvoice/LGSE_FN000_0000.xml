@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.0">
-	<libLGSE_Compatibility>0x00006003</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x06030001</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>000</ID>
 		<NAME>CLEARVOICE</NAME>
@@ -303,7 +303,7 @@
 			<value id="294" name="SDV_USER_AMBIENT_GAIN" index="139">0x00100000</value>
 		</INIT>
 		<VAR>
-			<value id="0" name="SDV_SETTING">0x00000002</value>
+			<value id="0" name="SDV_SETTING">0x00000001</value>
 		</VAR>
 	</LGSE_FUNCTION>
 </LGSE_API>

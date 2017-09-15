@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <LGSE_API version="6.0">
-	<libLGSE_Compatibility>0x00006008</libLGSE_Compatibility>
+	<libLGSE_Compatibility>0x00006005</libLGSE_Compatibility>
 	<LGSE_FUNCTION>
 		<ID>005</ID>
 		<NAME>PARAMETRICEQ</NAME>
 		<FLAG>0x000000ff</FLAG>
 		<VAR>
-			<value id="0" name="FILTER_COEFFICIENT" index="0">0xffc19ad5</value>
-			<value id="1" name="FILTER_COEFFICIENT" index="1">0x001e6f07</value>
-			<value id="2" name="FILTER_COEFFICIENT" index="2">0x001fc437</value>
-			<value id="3" name="FILTER_COEFFICIENT" index="3">0xffc19860</value>
-			<value id="4" name="FILTER_COEFFICIENT" index="4">0x001ea85a</value>
+			<value id="0" name="FILTER_COEFFICIENT" index="0">0xffc16e32</value>
+			<value id="1" name="FILTER_COEFFICIENT" index="1">0x001e99a8</value>
+			<value id="2" name="FILTER_COEFFICIENT" index="2">0x001fda6c</value>
+			<value id="3" name="FILTER_COEFFICIENT" index="3">0xffc16cbf</value>
+			<value id="4" name="FILTER_COEFFICIENT" index="4">0x001ebdc9</value>
 			<value id="5" name="FILTER_COEFFICIENT" index="5">0x00000000</value>
 			<value id="6" name="FILTER_COEFFICIENT" index="6">0x00000000</value>
 			<value id="7" name="FILTER_COEFFICIENT" index="7">0x00200000</value>
@@ -22,7 +22,7 @@
 			<value id="13" name="FILTER_COEFFICIENT" index="13">0x00000000</value>
 			<value id="14" name="FILTER_COEFFICIENT" index="14">0x00000000</value>
 			<value id="15" name="FREQUENCY" index="15">190</value>
-			<value id="16" name="GAIN" index="16">-60</value>
+			<value id="16" name="GAIN" index="16">-40</value>
 			<value id="17" name="Q" index="17">7</value>
 			<value id="18" name="TYPE" index="18">1</value>
 			<value id="19" name="FREQUENCY" index="19">100</value>
